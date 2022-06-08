@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat ~/config_own/Applications.txt | dmenu -i -b -fn "Fira Code-20" | xargs -n 1 sh -c
