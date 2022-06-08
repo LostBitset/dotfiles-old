@@ -42,7 +42,7 @@ fi
 
 if [[ "$TERM" == "xterm-256color" ]]
 then
-	terminalcount=`expr $(ps aux | grep -v sh | grep sakura | wc -l) - 1`
+	terminalcount=`expr $(ps aux | grep -v sh | grep Terminal | wc -l) - 1`
 	echo -ne "\033]0;Terminal (#$terminalcount)\007"
 	clear
 fi
