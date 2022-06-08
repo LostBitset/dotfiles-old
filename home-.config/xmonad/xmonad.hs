@@ -8,6 +8,7 @@ import XMonad.Hooks.ManageDocks
 customKeys =
 	[ ( (0, 0xFFEB), spawn "dmenu_apps" )
 	, ( (0, 0xFF61), spawn "scrot_kt" )
+	, ( (0, 0x1008FF12), spawn "mute" )
 	]
 
 main :: IO ()
