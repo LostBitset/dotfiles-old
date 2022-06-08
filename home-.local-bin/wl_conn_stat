@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ $(nmcli -g GENERAL.STATE dev show wlp3s0) == "100 (connected)" ]]
+then
+	echo "<fc=#0000ff>wlp3s0</fc> -> <fc=#00ff00>$(nmcli -g GENERAL.CONNECTION dev show wlp3s0)</fc>"
+else
+	echo "<fc=#ff0000>wlp3s0</fc>"
+fi
