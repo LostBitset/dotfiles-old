@@ -14,7 +14,7 @@ main :: IO ()
 main = do
     xmobarPipe <- spawnPipe "xmobar"
     xmonad $ def
-    	{ terminal = "sakura"
+    	{ terminal = "Terminal"
     	, manageHook = manageDocks <+> manageHook def
     	, layoutHook = avoidStruts $ layoutHook def
     	, handleEventHook = handleEventHook def <+> docksEventHook
