@@ -46,3 +46,10 @@ then
 	echo -ne "\033]0;Terminal (#$terminalcount)\007"
 	clear
 fi
+
+# Automatically generated from opam installation
+# Makes OCaml work
+
+# opam configuration
+test -r /home/hkt/.opam/opam-init/init.sh && . /home/hkt/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
