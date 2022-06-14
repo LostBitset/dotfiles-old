@@ -53,3 +53,6 @@ fi
 # opam configuration
 test -r /home/hkt/.opam/opam-init/init.sh && . /home/hkt/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
+# Make golang work
+# Just adds to the PATH
+export PATH=$PATH:/usr/local/go/bin
