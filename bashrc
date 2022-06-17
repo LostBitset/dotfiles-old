@@ -56,3 +56,4 @@ test -r /home/hkt/.opam/opam-init/init.sh && . /home/hkt/.opam/opam-init/init.sh
 # Make golang work
 # Just adds to the PATH
 export PATH=$PATH:/usr/local/go/bin
+
