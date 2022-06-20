@@ -17,6 +17,8 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 if [[ $(tty) == "/dev/tty1" ]]
 then
+	clear
+	xbps-install -S # Synchronize all repos
 
 	clear
 	neofetch
