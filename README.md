@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles `--setup-distro=void --setup-wm=xmonad`
 Config files
 
 Rules:
