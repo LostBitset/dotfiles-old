@@ -1,0 +1,3 @@
+bashrc ~/.bashrc
+vimrc ~/.vimrc
+nobeep /etc/modprobe.d/nobeep.conf
