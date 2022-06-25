@@ -1,5 +1,5 @@
 module Lib
-    ( checkSync
+    ( checkSyncRaw
     ) where
 
 import Control.Monad (liftM2, (<=<))

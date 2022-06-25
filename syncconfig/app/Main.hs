@@ -10,7 +10,7 @@ main :: IO ()
 main =
   let items = parseLines <$> readFile "../reg.txt" in
   let ap = handleMaybe (hPutStrLn stderr "Parser error") in
-  mapM_ checkSync `ap` items
+  mapM_ checkSyncRaw `ap` items
 
 parseLines :: String -> Maybe [(String, String)]
 parseLines = sequence . (parseLine <$>) . lines
