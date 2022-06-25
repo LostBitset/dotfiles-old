@@ -11,8 +11,12 @@ checkSyncRaw = checkSync <=< fixRawPaths
 
 fixRawPaths :: (String, String) -> IO (String, String)
 fixRawPaths (repoRaw, fsRaw) =
-    let givenHome = \home -> ("../" ++ repoRaw, home ++ '/':fsRaw) in
+    let givenHome = \home -> ("../" ++ repoRaw, replHome fsRaw home) in
     givenHome <$> getEnv "HOME"
+
+replHome :: String -> String -> String
+replHome ('~':xs) = (++xs)
+replHome s@_ = const s
 
 checkSync :: (String, String) -> IO ()
 checkSync (repo, fs) =
