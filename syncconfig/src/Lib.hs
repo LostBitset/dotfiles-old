@@ -2,6 +2,9 @@ module Lib
     ( checkSync
     ) where
 
+import Control.Monad (liftM2)
+import Data.Bool (bool)
+
 checkSync :: (String, String) -> IO ()
 checkSync (repo, fs) =
     let isDesync = liftM2 (/=) (readFile repo) (readFile fs) in
