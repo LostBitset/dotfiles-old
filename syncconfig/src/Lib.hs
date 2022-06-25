@@ -2,8 +2,17 @@ module Lib
     ( checkSync
     ) where
 
-import Control.Monad (liftM2)
+import Control.Monad (liftM2, (<=<))
 import Data.Bool (bool)
+import System.Environment (getEnv)
+
+checkSyncRaw :: (String, String) -> IO ()
+checkSyncRaw = checkSync <=< fixRawPaths
+
+fixRawPaths :: (String, String) -> IO (String, String)
+fixRawPaths (repoRaw, fsRaw) =
+    let givenHome = \home -> ("../" ++ repoRaw, home ++ '/':fsRaw) in
+    givenHome <$> getEnv "HOME"
 
 checkSync :: (String, String) -> IO ()
 checkSync (repo, fs) =
@@ -19,9 +28,9 @@ handleDesync (repo, fs) = do
     resp <- getLine
     case bool resp "i" $ (==[]) resp of
         "i" -> putStrLn $ "[DESYNC] Ignored " ++ fs ++ "."
-	"r" -> updateRepo (repo, fs)
+        "r" -> updateRepo (repo, fs)
         "f" -> updateFs (repo, fs)
-	_ -> putStrLn $ "[DESYNC] Invalid option. Ignored " ++ fs ++ "."
+        _ -> putStrLn $ "[DESYNC] Invalid option. Ignored " ++ fs ++ "."
 
 handleSync :: String -> IO ()
 handleSync fs = putStrLn $ "[OK]    File " ++ fs ++ " is synchronized."
