@@ -23,3 +23,9 @@ handleDesync (repo, fs) = do
 handleSync :: String -> IO ()
 handleSync fs = putStrLn "[OK]    File " ++ fs ++ " is synchronized."
 
+updateRepo :: (String, String) -> IO ()
+updateRepo (repo, fs) = putStrLn "!! <dbg> repo:" ++ repo ++ " <- fs:" ++ fs
+
+updateFs :: (String, String) -> IO ()
+updateFs (repo, fs) = putStrLn "!! <dbg> fs:" ++ fs ++ " <- repo:" ++ repo
+
