@@ -20,3 +20,6 @@ handleDesync (repo, fs) = do
         "f" -> updateFs (repo, fs)
 	_ -> putStrLn "[DESYNC] Invalid option. Ignored " ++ fs ++ "."
 
+handleSync :: String -> IO ()
+handleSync fs = putStrLn "[OK]    File " ++ fs ++ " is synchronized."
+
