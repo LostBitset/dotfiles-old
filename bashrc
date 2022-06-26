@@ -136,3 +136,4 @@ if [[ $1 -ne "noprofile" ]]; then
     source ~/.profile
 fi
 
+. "$HOME/.cargo/env"
