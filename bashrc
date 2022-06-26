@@ -139,3 +139,7 @@ fi
 # Added by cargo
 . "$HOME/.cargo/env"
 
+# Check dotfiles
+dfchk
+clear
+
