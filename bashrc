@@ -139,3 +139,6 @@ fi
 # Added by cargo
 . "$HOME/.cargo/env"
 
+# Make packages installed by opam work
+export PATH="$PATH:/home/lpc/.opam/4.14.0/bin"
+
