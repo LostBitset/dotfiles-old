@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# apt
+sudo apt update -y
+sudo apt upgrade -y
+
+# opam
+opam update -y
+opam upgrade -y
+eval $(opam env)
+
+# rustup
+rustup update
+

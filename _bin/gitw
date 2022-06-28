@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git status 2>/dev/null || echo "not inside a git repo"
+git status 2>/dev/null || exit 1
+git pull --ff-only
+git add $(git rev-parse --show-toplevel) --all
+git commit -m "$1"
+git push $(git remote) $(git branch --show-current)
+

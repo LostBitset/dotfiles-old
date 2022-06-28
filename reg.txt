@@ -2,3 +2,6 @@ vimrc ~/.vimrc
 bashrc ~/.bashrc
 profile ~/.profile
 nobeep /etc/modprobe.d/nobeep.conf
+_bin/dfchk ~/bin/dfchk
+_bin/gitw ~/bin/gitw
+_bin/everything ~/bin/everything
