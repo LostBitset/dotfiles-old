@@ -142,5 +142,6 @@ fi
 # Make packages installed by opam work
 export PATH="$PATH:/home/lpc/.opam/4.14.0/bin"
 
+# The only mode that makes sense to me lol
 export OCP_INDENT_CONFIG="JaneStreet"
 
