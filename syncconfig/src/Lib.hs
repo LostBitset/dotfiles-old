@@ -25,7 +25,7 @@ checkSync :: (FilePath, FilePath) -> IO ()
 checkSync (repo, fs) =
     let isDesync = liftM2 (/=) (readFile repo) (readFile fs) in
     isDesync >>= (\x ->
-        if x then handleDesync (repo, fs) else handleSync fs
+        if x then handleDesync (repo, fs) else handleSync repo
     )
 
 handleDesync :: (FilePath, FilePath) -> IO ()
@@ -41,7 +41,10 @@ handleDesync (repo, fs) = do
         _ -> putStrLn $ "[DESYNC] Invalid option. Ignored " ++ fs ++ "."
 
 handleSync :: FilePath -> IO ()
-handleSync fs = putStrLn $ "[OK]    File " ++ fs ++ " is synchronized."
+handleSync repo =
+    let name = "{repo}" ++ drop 2 repo in
+    let padding = flip replicate ' ' $ 30 - length name in
+    putStrLn $ "[OK]    File " ++ name ++ padding ++ " is synchronized."
 
 updateRepo :: (FilePath, FilePath) -> IO ()
 updateRepo (repo, fs) = (fs `copyFile` repo) *> syncRepo
