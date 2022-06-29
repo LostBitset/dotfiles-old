@@ -1,4 +1,5 @@
 #!/bin/bash
 
+(cd ~/dotfiles; git pull --ff-only)
 (cd ~/dotfiles/syncconfig; stack exec syncconfig-exe)
 
