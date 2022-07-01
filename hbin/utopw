@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# THIS IS A WORKAROUND SCRIPT !!!!
+
+# My utop is currently broken and I have to use this workaround :(
+
+eval `opam config env`
+utop
+
