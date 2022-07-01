@@ -2,8 +2,9 @@ desktop/bigclock ~/.config/conky/bigClock-lithium-light-conky.conf
 desktop/tint2 ~/.config/tint2/beryllium.tint2rc
 editing/vimrc ~/.vimrc
 hbin/dfchk ~/bin/dfchk
-hbin/gitw ~/bin/gitw
 hbin/everything ~/bin/everything
+hbin/gitw ~/bin/gitw
+hbin/nman ~/bin/nman
 hbin/runvpn ~/bin/runvpn
 misc/inputrc ~/.inputrc
 misc/nobeep /etc/modprobe.d/nobeep.conf
