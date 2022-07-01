@@ -1,8 +1,6 @@
 #!/bin/bash
 
 fst="$1"
-
 [[ "$fst" == "" ]] && fst="us"
-
 sudo openvpn ~/openvpn_cfgdir/$fst-*.udp.ovpn
 
