@@ -3,6 +3,7 @@
 # apt
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt full-upgrade -y
 
 # opam
 opam update -y
