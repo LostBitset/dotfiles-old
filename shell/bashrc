@@ -147,7 +147,7 @@ export OCP_INDENT_CONFIG="JaneStreet"
 
 # Load workaround scripts
 # This can be disabled by creating a file at ~/.ban_workarounds
-if [[ -f "$HOME/.ban_workarounds" ]]; then
+if ! [[ -f "$HOME/.ban_workarounds" ]]; then
     export PATH="$PATH:/$HOME/bin/WORKAROUNDS"
 fi
 
