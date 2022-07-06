@@ -112,7 +112,7 @@ border_color_pressed = #000000 0
 
 #-------------------------------------
 # Panel
-panel_items = PTBCP
+panel_items = PCBTS
 panel_size = 90% 30
 panel_margin = 0 0
 panel_padding = 6 0 0
@@ -282,20 +282,20 @@ tooltip_font = Sans normal 10
 # Buttons - Panel item = P
 
 # Show Root Menu (BL-flame icon)
-button = new
-button_icon = start-here-bunsenlabs
-button_text =
-button_tooltip = Main Menu
-button_lclick_command = jgmenu_run
-button_rclick_command =
-button_mclick_command =
-button_uwheel_command =
-button_dwheel_command =
-button_font_color = #ffffff 100
-button_padding = 2 2
-button_background_id = 5
-button_centered = 1
-button_max_icon_size = 28
+#button = new
+#button_icon = start-here-bunsenlabs
+#button_text =
+#button_tooltip = Main Menu
+#button_lclick_command = jgmenu_run
+#button_rclick_command =
+#button_mclick_command =
+#button_uwheel_command =
+#button_dwheel_command =
+#button_font_color = #ffffff 100
+#button_padding = 2 2
+#button_background_id = 5
+#button_centered = 1
+#button_max_icon_size = 28
 
 # Exit dialog (Power icon)
 button = new
