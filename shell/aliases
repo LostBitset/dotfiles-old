@@ -1,4 +1,5 @@
 #!/bin/bash
 
+alias c='clear; '
 alias hotspot='nmcli con up Hotspot'
 
