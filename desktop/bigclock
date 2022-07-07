@@ -56,7 +56,8 @@ own_window_argb_value = 0,
 -- bl-conkymove, original value for gap_x: 90
 	gap_x = 1563,-- left | right
 -- bl-conkymove, original value for gap_y: 10
-	gap_y = 94,-- up | down
+-- then was 94
+	gap_y = 986,-- up | down
 
     alignment = 'top_left',
 --  End Window Settings

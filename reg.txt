@@ -1,4 +1,5 @@
 desktop/bigclock ~/.config/conky/bigClock-lithium-light-conky.conf
+desktop/monitor ~/.config/conky/BL-Yeti-conky.conf
 desktop/tint2 ~/.config/tint2/beryllium.tint2rc
 editing/vimrc ~/.vimrc
 hbin/dfchk ~/bin/dfchk
