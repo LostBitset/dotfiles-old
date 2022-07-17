@@ -20,3 +20,8 @@ fi
 if [ -d ${HOME}/bin ] ; then
     PATH="${HOME}"/bin:"${PATH}"
 fi
+
+# Fix this stupid bug where the lock screen gets set as my wallpaper
+# No idea why this happens lol
+nitrogen --restore
+
