@@ -364,7 +364,7 @@ log-level = "warn";
 # logs might still be written to the stderr.
 # When setting this option from the config file, it is recommended to use an absolute path.
 #
-log-file = '/var/log/picom/picom.log'
+# log-file = '/path/to/your/log/file'
 
 # Show all X errors (for debugging)
 show-all-xerrors = true
