@@ -364,10 +364,10 @@ log-level = "warn";
 # logs might still be written to the stderr.
 # When setting this option from the config file, it is recommended to use an absolute path.
 #
-# log-file = '/path/to/your/log/file'
+log-file = '/var/log/picom/picom.log'
 
 # Show all X errors (for debugging)
-# show-all-xerrors = false
+show-all-xerrors = true
 
 # Write process ID to a file.
 # write-pid-path = '/path/to/your/log/file'
