@@ -12,6 +12,7 @@ hbin/runvpn ~/bin/runvpn
 hbin/utopw ~/bin/WORKAROUNDS/utopw
 misc/condarc ~/.condarc
 misc/inputrc ~/.inputrc
+misc/newtab ~/firefox_newtab.html
 misc/nobeep /etc/modprobe.d/nobeep.conf
 misc/default-grub /etc/default/grub
 shell/aliases ~/.bash_aliases
