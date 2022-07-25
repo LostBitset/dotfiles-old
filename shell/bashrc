@@ -145,6 +145,9 @@ export PATH="$PATH:/home/lpc/.opam/4.14.0/bin"
 # The only mode that makes sense to me lol
 export OCP_INDENT_CONFIG="JaneStreet"
 
+# Initialize zoxide
+eval "$(zoxide init bash)"
+
 # Load workaround scripts
 # This can be disabled by creating a file at ~/.ban_workarounds
 if ! [[ -f "$HOME/.ban_workarounds" ]]; then
