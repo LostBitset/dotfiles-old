@@ -425,8 +425,6 @@ wintypes:
 };
 
 
-unredir-if-possible = false;
-
 ########################################################################
 ###  "advanced" machine specific options  ###
 
@@ -466,7 +464,7 @@ unredir-if-possible = false;
 
 # Enable/disable VSync.
 # vsync = false
-# vsync = true
+vsync = true
 
 
 #################################
@@ -523,3 +521,8 @@ unredir-if-possible = false;
 # unless you wish to specify a lower refresh rate than the actual value.
 #
 # sw-opti =
+
+backend = "glx";
+#paint-on-overlay = true;
+#glx-no-stencil = true;
+#glx-no-rebind-pixmap = true;
