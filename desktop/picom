@@ -425,6 +425,8 @@ wintypes:
 };
 
 
+unredir-if-possible = false;
+
 ########################################################################
 ###  "advanced" machine specific options  ###
 
