@@ -2,7 +2,7 @@
 
 (cd ~/dotfiles; git pull --ff-only)
 if [[ $1 == '--fwd' ]]; then
-	(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe < yes r)
+	(cd ~/dotfiles/syncconfig; yes r | stack exec syncconfig-exe)
 else
 	(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe)
 fi
