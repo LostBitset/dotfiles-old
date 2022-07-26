@@ -4,7 +4,12 @@
 		<title>New Tab</title>
 		<meta charset='utf-8'>
 	</head>
-	<body>
+	<body bgcolor='#000'>
+		<div style='display:flex;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);'>
+			<h1 style='font-family:monospace;color:white'>
+				Loading...
+			</h1>
+		</div>
 		<script type='text/javascript'>
 		window.location.replace('https://calendar.proton.me/u/0')
 		</script>
