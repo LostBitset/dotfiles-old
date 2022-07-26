@@ -1,0 +1,14 @@
+{
+	"theme": "Brackets.sublime-theme",
+	"color_scheme": "Packages/Colorsublime - Themes/Earthsong_Dark.tmTheme",
+	"font_size": 17,
+	"font_face": "Fira Code",
+	"mini_diff": "false",
+	"ignored_packages":
+	[
+		"Six",
+		"Vintage",
+		"Vintageous",
+	],
+	"neovintageous_build_version": 11100,
+}
