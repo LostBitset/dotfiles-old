@@ -11,4 +11,16 @@
             }
         ]
 	},
+	{
+	    "keys": ["\\"],
+	    "command": "move",
+	    "args": {"by": "lines", "forward": false},
+	    "context": [
+            {
+            	"key": "auto_complete_visible",
+            	"operator": "equal",
+            	"operand": true
+            }
+        ]
+	},
 ]
