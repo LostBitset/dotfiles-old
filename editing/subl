@@ -11,6 +11,7 @@
 		"Vintageous",
 	],
 	"neovintageous_build_version": 11100,
+	"vintageous_default_mode": "insert",
 	"remember_workspace": false,
 	"hardware_acceleration": "opengl",
 	"word_wrap": true,
