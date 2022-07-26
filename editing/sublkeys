@@ -1,1 +1,14 @@
-[]
+[
+	{
+	    "keys": ["tab"],
+	    "command": "move",
+	    "args": {"by": "lines", "forward": true},
+	    "context": [
+            {
+            	"key": "auto_complete_visible",
+            	"operator": "equal",
+            	"operand": true
+            }
+        ]
+	},
+]
