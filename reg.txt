@@ -4,6 +4,7 @@ desktop/picom ~/.config/picom.conf
 desktop/tint2 ~/.config/tint2/beryllium.tint2rc
 desktop/xsessionrc ~/.xsessionrc
 editing/subl ~/.config/sublime-text/Packages/User/Preferences.sublime-settings
+editing/sublkeys ~/.config/sublime-text/Packages/User/Default.sublime-keymap
 editing/vimrc ~/.vimrc
 hbin/dfchk ~/bin/dfchk
 hbin/everything ~/bin/everything
