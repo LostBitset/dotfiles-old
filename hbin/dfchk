@@ -1,5 +1,9 @@
 #!/bin/bash
 
 (cd ~/dotfiles; git pull --ff-only)
-(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe)
+if [[ $1 == '--fwd' ]]; then
+	(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe < yes r)
+else
+	(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe)
+fi
 
