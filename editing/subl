@@ -15,4 +15,5 @@
 	"remember_workspace": false,
 	"hardware_acceleration": "opengl",
 	"word_wrap": true,
+	"auto_complete_cycle": false,
 }
