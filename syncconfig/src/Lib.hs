@@ -37,7 +37,7 @@ handleDesync (repo, fs) = do
     case bool resp "i" $ null resp of
         "i" -> putStrLn $ "[DESYNC] Ignored " ++ fs ++ "."
         "r" -> updateRepo (repo, fs)
-        "destroy" -> repo `copyFile` fs
+        "destroy" -> (repo `copyFile` fs)
         "f" -> updateFs (repo, fs)
         _ -> putStrLn $ "[DESYNC] Invalid option. Ignored " ++ fs ++ "."
 

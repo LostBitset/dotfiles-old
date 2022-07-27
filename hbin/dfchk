@@ -3,6 +3,8 @@
 (cd ~/dotfiles; git pull --ff-only)
 if [[ $1 == '--fwd' ]]; then
 	(cd ~/dotfiles/syncconfig; yes r | stack exec syncconfig-exe)
+elif [[ $1 == '--destroy-everything' ]]; then
+	(cd ~/dotfiles/syncconfig; yes destroy | stack exec syncconfig-exe)
 else
 	(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe)
 fi
