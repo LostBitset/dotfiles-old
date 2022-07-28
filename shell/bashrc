@@ -154,3 +154,7 @@ if ! [[ -f "$HOME/.ban_workarounds" ]]; then
     export PATH="$PATH:/$HOME/bin/WORKAROUNDS"
 fi
 
+if [[ "$TERM" == 'linux' ]]; then
+	export PS1='┌ \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n└ \$ '
+fi
+
