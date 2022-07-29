@@ -8,7 +8,6 @@ editing/sublkeys ~/.config/sublime-text/Packages/User/Default.sublime-keymap
 editing/vimrc ~/.vimrc
 hbin/dfchk ~/bin/dfchk
 hbin/everything ~/bin/everything
-hbin/gitc ~/bin/gitc
 hbin/gitw ~/bin/gitw
 hbin/nman ~/bin/nman
 hbin/runvpn ~/bin/runvpn

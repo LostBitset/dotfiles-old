@@ -1,4 +1,0 @@
-#!/bin/bash
-
-gitw "Create \`$(gits | grep -E $'^\t\w+.\w+' | cut -f 2)\`"
-
