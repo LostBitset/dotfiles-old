@@ -506,7 +506,7 @@ vsync = true
 # calls are finished before picom starts drawing. Needed on nvidia-drivers
 # with GLX backend for some users.
 #
-# xrender-sync-fence = false
+xrender-sync-fence = true
 
 # Specify refresh rate of the screen. If not specified or 0, picom will
 # try detecting this with X RandR extension.
