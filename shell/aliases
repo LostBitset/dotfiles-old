@@ -3,4 +3,5 @@
 alias c='clear; '
 alias gits='git status'
 alias hotspot='nmcli con up Hotspot'
+alias rsubl='subl .; sleep 2; exit'
 
