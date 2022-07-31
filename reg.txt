@@ -5,6 +5,8 @@ desktop/picom ~/.config/picom.conf
 desktop/tint2 ~/.config/tint2/beryllium.tint2rc
 desktop/xsessionrc ~/.xsessionrc
 editing/vimrc ~/.vimrc
+editing/vscode-cfg ~/.config/Code/User/settings.json
+editing/vscode-kbd ~/.config/Code/User/keybindings.json
 hbin/dfchk ~/bin/dfchk
 hbin/everything ~/bin/everything
 hbin/gitw ~/bin/gitw

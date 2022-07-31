@@ -1,0 +1,18 @@
+{
+    "telemetry.telemetryLevel": "crash",
+    "workbench.colorTheme": "Deep Water",
+    "[ocaml]": {
+        "editor.defaultFormatter": "AllanBlanchard.ocp-indent"
+    },
+    "[ocaml.interface]": {
+        "editor.defaultFormatter": "AllanBlanchard.ocp-indent"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "editor.detectIndentation": false,
+    "terminal.integrated.inheritEnv": false,
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "editor.scrollbar.verticalScrollbarSize": 0,
+}
