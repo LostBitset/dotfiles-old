@@ -15,4 +15,5 @@
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": false,
     "editor.scrollbar.verticalScrollbarSize": 0,
+    "scm.diffDecorations": "none",
 }
