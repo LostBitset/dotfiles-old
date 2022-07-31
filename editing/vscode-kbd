@@ -1,0 +1,45 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+m ctrl+r",
+        "command": "ocaml.server.restart"
+    },
+    {
+        "key": "ctrl+m ctrl+c",
+        "command": "editor.action.clipboardCopyAction"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.clipboardCopyAction"
+    },
+    {
+        "key": "ctrl+m ctrl+b",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "shift+alt+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "shift+alt+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+m ctrl+0",
+        "command": "editor.action.fontZoomReset"
+    },
+    {
+        "key": "ctrl+k ctrl+enter",
+        "command": "git.push"
+    },
+    {
+        "key": "alt+`",
+        "command": "extension.vim_escape",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "escape",
+        "command": "-extension.vim_escape",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    }
+]
