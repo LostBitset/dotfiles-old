@@ -33,13 +33,17 @@
         "command": "git.push"
     },
     {
-        "key": "alt+`",
-        "command": "extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        "key": "ctrl+m ctrl+m",
+        "command": "toggleVim"
     },
     {
-        "key": "escape",
-        "command": "-extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        "key": "home home",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "-hideSuggestWidget",
+        "when": "suggestWidgetVisible && textInputFocus"
     }
 ]
