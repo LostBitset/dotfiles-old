@@ -16,4 +16,5 @@
     "editor.scrollbar.verticalScrollbarSize": 0,
     "scm.diffDecorations": "none",
     "workbench.statusBar.visible": false,
+    "window.zoomLevel": 3,
 }
