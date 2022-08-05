@@ -13,7 +13,7 @@
     "editor.detectIndentation": false,
     "terminal.integrated.inheritEnv": false,
     "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false,
     "editor.scrollbar.verticalScrollbarSize": 0,
     "scm.diffDecorations": "none",
+    "workbench.statusBar.visible": false,
 }
