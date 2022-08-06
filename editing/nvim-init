@@ -1,0 +1,14 @@
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vimrc
+
+set guifont=Fira\ Code:h15
+
+call plug#begin()
+
+Plug 'luochen1990/rainbow'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
+call plug#end()
+
