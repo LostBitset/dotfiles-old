@@ -145,6 +145,12 @@ export PATH="$PATH:/home/lpc/.opam/4.14.0/bin"
 # The only mode that makes sense to me lol
 export OCP_INDENT_CONFIG="JaneStreet"
 
+# Read the current version of goneovim
+export RC_GONEOVIM_VER="$(cat /home/lpc/.config/goneovim.ver-string)"
+
+# Add goneovim to the PATH
+export PATH="$PATH:/home/lpc/goneovim-$RC_GONEOVIM_VER"
+
 # Initialize zoxide
 eval "$(zoxide init bash)"
 
