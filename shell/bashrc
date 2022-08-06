@@ -154,3 +154,6 @@ if ! [[ -f "$HOME/.ban_workarounds" ]]; then
     export PATH="$PATH:/$HOME/bin/WORKAROUNDS"
 fi
 
+# Define XDG_CONFIG_HOME
+export XDG_CONFIG_HOME="$HOME/.config"
+
