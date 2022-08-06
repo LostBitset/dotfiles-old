@@ -11,8 +11,16 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mhartington/oceanic-next'
 
 call plug#end()
 
-inoremap <expr> ; pumvisible() ? asyncomplete#close_popup() : ";"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> \     pumvisible() ? "\<C-p>" : "\\"
+inoremap <expr> ;     pumvisible() ? asyncomplete#close_popup() : ";"
+
+colorscheme OceanicNext
+
+nnoremap <M-[> <C-w>v<C-w><C-w>:terminal<CR><C-w><C-w>
+nnoremap <M-]> <C-w>v<C-w><C-w>:terminal<CR>
 
