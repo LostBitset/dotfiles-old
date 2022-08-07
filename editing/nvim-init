@@ -27,3 +27,5 @@ colorscheme OceanicNext
 nnoremap <M-[> <C-w>v<C-w><C-w>:terminal<CR>65<C-w><bar><C-w><C-w>
 nnoremap <M-]> <C-w>v<C-w><C-w>:terminal<CR>65<C-w><bar>
 
+nnoremap <C-l> i<C-l><C-\><C-n>
+
