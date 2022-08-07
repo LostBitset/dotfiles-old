@@ -4,5 +4,5 @@ alias c='clear; '
 alias gits='git status'
 alias hotspot='nmcli con up Hotspot'
 alias hcode='code .; exit'
-alias gnh='gnvim .; exit'
+alias gnh='gnvim . & exit'
 
