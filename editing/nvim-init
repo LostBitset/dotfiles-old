@@ -20,6 +20,8 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> \     pumvisible() ? "\<C-p>" : "\\"
 inoremap <expr> ;     pumvisible() ? asyncomplete#close_popup() : ";"
 
+inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() . "\<cr>" : "\<cr>"
+
 colorscheme OceanicNext
 
 nnoremap <M-[> <C-w>v<C-w><C-w>:terminal<CR>65<C-w><bar><C-w><C-w>
