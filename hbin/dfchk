@@ -8,4 +8,8 @@ elif [[ $1 == '--destroy-everything' ]]; then
 else
 	(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe)
 fi
+echo '*** RESTART (running `syncconfig` again) ***'
+sleep 0.5
+clear
+(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe)
 
