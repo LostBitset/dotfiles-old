@@ -11,5 +11,5 @@ fi
 echo '*** RESTART (running `syncconfig` again) ***'
 sleep 0.5
 clear
-(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe | grep -v 'Stack has not been tested')
+(cd ~/dotfiles/syncconfig; stack exec syncconfig-exe 2>1 | grep -v 'Stack has not been tested')
 
