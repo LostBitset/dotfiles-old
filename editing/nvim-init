@@ -13,6 +13,7 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'tikhomirov/vim-glsl'
+Plug 'antoinemadec/FixCursorHold.nvim'
 
 call plug#end()
 
@@ -23,6 +24,8 @@ inoremap <expr> ;     pumvisible() ? asyncomplete#close_popup() : ";"
 inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() . "\<cr>" : "\<cr>"
 
 colorscheme OceanicNext
+
+let g:cursorhold_updatetime = 100
 
 nnoremap <M-[> <C-w>v<C-w><C-w>:terminal<CR>65<C-w><bar><C-w><C-w>
 nnoremap <M-]> <C-w>v<C-w><C-w>:terminal<CR>65<C-w><bar>
