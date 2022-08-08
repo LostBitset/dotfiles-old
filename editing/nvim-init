@@ -33,3 +33,7 @@ nnoremap <M-]> <C-w>v<C-w><C-w>:terminal<CR>65<C-w><bar>
 
 nnoremap <C-l> i<C-l><C-\><C-n>
 
+nnoremap <M-W> <C-w><C-w>:q<CR>
+
+nnoremap <M-s> :Fern . -drawer<CR><C-w><C-w>
+
