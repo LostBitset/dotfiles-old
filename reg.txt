@@ -11,6 +11,7 @@ editing/vscode-cfg ~/.config/Code/User/settings.json
 editing/vscode-kbd ~/.config/Code/User/keybindings.json
 hbin/dfchk ~/bin/dfchk
 hbin/everything ~/bin/everything
+hbin/ga ~/bin/ga
 hbin/gitw ~/bin/gitw
 hbin/nman ~/bin/nman
 hbin/runvpn ~/bin/runvpn
