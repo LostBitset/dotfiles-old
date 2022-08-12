@@ -37,3 +37,5 @@ nnoremap <M-W> <C-w><C-w>:q<CR>
 
 nnoremap <M-s> :Fern . -drawer<CR><C-w><C-w>
 
+nnoremap <M-k> <C-w><C-w>:w<CR><C-w><C-w>
+
