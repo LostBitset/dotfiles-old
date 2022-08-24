@@ -28,3 +28,7 @@ nitrogen --restore
 # Read timezone from file
 TZ="$(cat $HOME/.config/.user-tz || echo America/New_York)"; export TZ
 
+# I don't want anyone else judging me after I accidentally blast
+# J-pop or synthwave
+amixer set Master mute
+
