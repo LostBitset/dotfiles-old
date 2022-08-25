@@ -32,7 +32,8 @@ TZ="$(cat $HOME/.config/.user-tz || echo America/New_York)"; export TZ
 # J-pop or synthwave
 amixer set Master mute
 
+# Actually never mind this breaks things
 # Use syndaemon to disable trackpad while typing
 # Typing prevents tapping and scrolling for the next 0.5 seconds
-syndaemon -i 0.5 -t -K -R -d
+# syndaemon -i 0.5 -t -K -R -d
 
