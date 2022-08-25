@@ -36,6 +36,7 @@ amixer set Master mute
 # Typing prevents tapping and scrolling for the next 0.5 seconds
 syndaemon -i 0.5 -t -K -R -d
 
-# mute
+# Mute microphone also
+# (toggle only if not off)
 amixer get Capture | grep \\[off\\] || amixer set Capture toggle
 
