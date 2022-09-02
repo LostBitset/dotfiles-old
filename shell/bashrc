@@ -170,3 +170,6 @@ vpn_color_connect_sedcmd="s/Initialization Sequence Completed/Initalization Sequ
 alias runvpnat="$(which runvpn)"
 alias runvpn='runvpn | sed "$vpn_color_connect_sedcmd"'
 
+# Add folder with symlink to lorien binary
+export PATH="$PATH:$HOME/.lorien/bin/"
+
