@@ -8,7 +8,7 @@ alias gnh='gnvim . & exit'
 
 # THE FOLLOWING ALIASES OVERWRITE EXISTING
 # BINARIES ON THE PATH
-if [[ "$1" -eq "--no-overwrite" ]]; then
-	exit
+if [[ "$Y_BASH_NoOverwriteAliases" -ne "1" ]]; then
+	alias lorien='lorien & exit'
 fi
 
