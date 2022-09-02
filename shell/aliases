@@ -6,3 +6,9 @@ alias hotspot='nmcli con up Hotspot'
 alias hcode='code .; exit'
 alias gnh='gnvim . & exit'
 
+# THE FOLLOWING ALIASES OVERWRITE EXISTING
+# BINARIES ON THE PATH
+if [[ "$1" -eq "--no-overwrite" ]]; then
+	exit
+fi
+
