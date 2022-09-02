@@ -165,10 +165,12 @@ cGRN=$'\033[0;32m'
 cRED=$'\033[0;31m'
 cEND=$'\033[0m'
 
-# OpenVPN stuff
-vpn_color_connect_sedcmd="s/Initialization Sequence Completed/Initalization Sequence Completed ${cGRN}(connected)${cEND}/g"
-alias runvpnat="$(which runvpn)"
-alias runvpn='runvpn | sed "$vpn_color_connect_sedcmd"'
+# OpenVPN stuff (pretty colors, involves aliases that overwrite)
+if [[ "$Y_BASH_NoOverwriteAliases" -ne "1" ]]; then
+	vpn_color_connect_sedcmd="s/Initialization Sequence Completed/Initalization Sequence Completed ${cGRN}(connected)${cEND}/g"
+	alias runvpnat="$(which runvpn)"
+	alias runvpn='runvpn | sed "$vpn_color_connect_sedcmd"'
+fi
 
 # Add folder with symlink to lorien binary
 export PATH="$PATH:$HOME/.lorien/bin/"
