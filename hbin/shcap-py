@@ -11,11 +11,7 @@ while True:
     cmds = cmd.strip()
     with open(fname, 'a') as f:
         f.write(f'{cmds}\n')
-    if cmds == '!d':
-        os.system("tac " + fname + " | awk '!NF {print \"\"};NF {if (n) {print} else {n=1}}' | tac > " + fname + ".tmp")
-        os.system(f'cat {fname}.tmp > {fname}')
-        os.system(f'rm {fname}.tmp')
-    elif cmds.startswith('cd ') or cmds == 'cd':
+    if cmds.startswith('cd ') or cmds == 'cd':
         os.chdir(cmds[3:])
     elif cmds.startswith('exit ') or cmds == 'exit':
         break
