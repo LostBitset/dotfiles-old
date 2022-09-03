@@ -15,6 +15,8 @@ hbin/ga ~/bin/ga
 hbin/gitw ~/bin/gitw
 hbin/nman ~/bin/nman
 hbin/runvpn ~/bin/runvpn
+hbin/shcap ~/bin/shcap
+hbin/shcap-py ~/shcap.py
 hbin/utopw ~/bin/WORKAROUNDS/utopw
 misc/condarc ~/.condarc
 misc/inputrc ~/.inputrc
