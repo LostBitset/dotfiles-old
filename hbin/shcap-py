@@ -1,0 +1,25 @@
+import os
+
+sesh_name = input('<shcap> Enter a name for this session: ')
+fname = f'REC-{sesh_name}.sh.shcap'
+os.system(f'touch {fname}')
+print(f'<shcap> This session will be recorded to `{fname}`')
+
+while True:
+    pwd = os.getcwd()
+    cmd = input(f'(cap-sesh):{pwd}$ ')
+    cmds = cmd.strip()
+    with open(fname, 'a') as f:
+        f.write(f'{cmds}\n')
+    if cmds == '!d':
+        os.system("tac " + fname + " | awk '!NF {print \"\"};NF {if (n) {print} else {n=1}}' | tac > " + fname + ".tmp")
+        os.system(f'cat {fname}.tmp > {fname}')
+        os.system(f'rm {fname}.tmp')
+    elif cmds.startswith('cd ') or cmds == 'cd':
+        os.chdir(cmds[3:])
+    elif cmds.startswith('exit ') or cmds == 'exit':
+        break
+    else:
+        os.system(cmd)
+print(f'<shcap> See `{fname}` for recorded session contents')
+
