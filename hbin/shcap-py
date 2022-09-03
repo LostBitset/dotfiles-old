@@ -5,17 +5,22 @@ fname = f'REC-{sesh_name}.sh.shcap'
 os.system(f'touch {fname}')
 print(f'<shcap> This session will be recorded to `{fname}`')
 
+origcwd = os.getcwd()
+
 while True:
     pwd = os.getcwd()
     cmd = input(f'(cap-sesh):{pwd}$ ')
     cmds = cmd.strip()
+    os.chdir(origcwd)
     with open(fname, 'a') as f:
         f.write(f'{cmds}\n')
+    os.chdir(pwd)
     if cmds.startswith('cd ') or cmds == 'cd':
         os.chdir(cmds[3:])
     elif cmds.startswith('exit ') or cmds == 'exit':
         break
     else:
         os.system(cmd)
+
 print(f'<shcap> See `{fname}` for recorded session contents')
 
