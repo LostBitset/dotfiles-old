@@ -34,7 +34,8 @@ amixer set Master mute
 
 # Use syndaemon to disable trackpad while typing
 # Typing prevents tapping and scrolling for the next 0.5 seconds
-syndaemon -i 0.5 -t -K -R -d
+# (Commented out because it causes problems)
+# syndaemon -i 0.5 -t -K -R -d
 
 # Mute microphone also
 # (toggle only if not off)
