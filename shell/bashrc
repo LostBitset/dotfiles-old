@@ -175,3 +175,9 @@ fi
 # Add folder with symlink to lorien binary
 export PATH="$PATH:$HOME/.lorien/bin/"
 
+# Add FRC folder for latest year to path and create alias
+# (ride is short for Robotics IDE)
+LATEST_WPILIB_YEAR="$(ls $HOME/wpilib | tac - | head -n 1)"
+export PATH="$PATH:$HOME/wpilib/$LATEST_WPILIB_YEAR/frccode"
+alias ride="frccode$LATEST_WPILIB_YEAR & exit"
+
