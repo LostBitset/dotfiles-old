@@ -5,6 +5,7 @@ alias gits='git status'
 alias hotspot='nmcli con up Hotspot'
 alias hcode='code .; exit'
 alias gnh='gnvim . & exit'
+alias cldn='rm ~/Downloads/*'
 
 # THE FOLLOWING ALIASES OVERWRITE EXISTING
 # BINARIES ON THE PATH
