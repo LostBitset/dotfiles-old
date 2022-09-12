@@ -172,5 +172,5 @@ own_window_argb_value = 0,
 
 
 conky.text = [[
-${font Futura Bk BT:pixelsize=65}${color #A01010}${time %H/%S %a %m/%d}
+${font Fira Code:pixelsize=65}${color #2B454F}${time %H/%S %a %m/%d}
 ]];
