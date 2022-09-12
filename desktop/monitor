@@ -56,7 +56,7 @@ conky.config = {
 --    maximum_width = 200,
 
     gap_x = -29,-- left | right
-    gap_y = 10,-- up | down
+    gap_y = 40,-- up | down
 
     alignment = 'bm',
 --  End Window Settings
