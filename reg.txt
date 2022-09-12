@@ -1,6 +1,7 @@
 desktop/conkys ~/.config/conky/conky-startup-session
 desktop/kbd-bl-xml ~/.config/openbox/bl-rc.xml
 desktop/monitor ~/.config/conky/BL-Yeti-conky.conf
+desktop/bigclock ~/.config/conky/bigClock-lithium-light-conky.conf
 desktop/picom ~/.config/picom.conf
 desktop/tint2 ~/.config/tint2/beryllium.tint2rc
 desktop/xsessionrc ~/.xsessionrc
