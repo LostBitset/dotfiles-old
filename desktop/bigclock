@@ -172,5 +172,5 @@ own_window_argb_value = 0,
 
 
 conky.text = [[
-${font Fira Code:pixelsize=65}${color green}${time %H/%S %a %m/%d}
+${font Fira Code:bold:size=40}${color white}${time %H/%S}  ${color orange}${time %a}  ${color white}${time %m/%d}
 ]];
