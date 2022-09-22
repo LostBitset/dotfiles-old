@@ -13,3 +13,6 @@ eval $(opam env)
 # rustup
 rustup update
 
+# miniconda
+conda update --all -y
+
