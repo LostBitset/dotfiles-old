@@ -15,6 +15,7 @@ hbin/everything ~/bin/everything
 hbin/ga ~/bin/ga
 hbin/gitw ~/bin/gitw
 hbin/nman ~/bin/nman
+hbin/pip3-up ~/bin/pip3-up
 hbin/runvpn ~/bin/runvpn
 hbin/shcap ~/bin/shcap
 hbin/shcap-py ~/shcap.py
