@@ -16,3 +16,6 @@ rustup update
 # miniconda
 conda update --all -y
 
+# python (pip)
+pip3-up
+
