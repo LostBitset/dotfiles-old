@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# update dotfiles repo
+dfchk --fwd
+
 # apt
 sudo apt update -y
 sudo apt upgrade -y
