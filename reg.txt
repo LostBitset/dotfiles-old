@@ -14,6 +14,7 @@ hbin/dfchk ~/bin/dfchk
 hbin/everything ~/bin/everything
 hbin/ga ~/bin/ga
 hbin/gitw ~/bin/gitw
+hbin/mk-ocamlfmt ~/bin/mk-ocamlfmt
 hbin/nman ~/bin/nman
 hbin/pip3-up ~/bin/pip3-up
 hbin/runvpn ~/bin/runvpn
