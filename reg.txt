@@ -5,6 +5,7 @@ desktop/bigclock ~/.config/conky/bigClock-lithium-light-conky.conf
 desktop/picom ~/.config/picom.conf
 desktop/tint2 ~/.config/tint2/beryllium.tint2rc
 desktop/xsessionrc ~/.xsessionrc
+editing/ocamlfmt ~/.config/default-ocamlformat
 editing/pycodestyle ~/.config/pycodestyle
 editing/nvim-init ~/.config/nvim/init.vim
 editing/vimrc ~/.vimrc
