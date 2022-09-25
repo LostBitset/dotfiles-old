@@ -28,8 +28,8 @@ colorscheme OceanicNext
 
 let g:cursorhold_updatetime = 100
 
-nnoremap <M-[> <C-w>v<C-w><C-w>:terminal<CR>60<C-w><bar><C-w><C-w>
-nnoremap <M-]> <C-w>v<C-w><C-w>:terminal<CR>60<C-w><bar>
+nnoremap <M-[> <C-w>v<C-w><C-w>:terminal<CR>70<C-w><bar><C-w><C-w>
+nnoremap <M-]> <C-w>v<C-w><C-w>:terminal<CR>70<C-w><bar>
 
 nnoremap <C-l> i<C-l><C-\><C-n>
 
