@@ -1,3 +1,2 @@
 Stack has not been tested with GHC versions above 8.10, and using 9.0.2, this may fail
 Stack has not been tested with Cabal versions above 3.2, but version 3.4.1.0 was found, this may fail
-syncconfig-exe: ../misc/lxterminal: openFile: does not exist (No such file or directory)

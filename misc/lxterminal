@@ -1,6 +1,6 @@
 # Beryllium theme colours
 [general]
-fontname=Monospace 10
+fontname=Monospace 20
 selchars=-A-Za-z0-9,./?%&#:_
 scrollback=5000
 bgcolor=rgba(24,25,26,0.95)
@@ -27,8 +27,8 @@ cursorblinks=false
 cursorunderline=false
 audiblebell=false
 tabpos=top
-geometry_columns=80
-geometry_rows=24
+geometry_columns=45
+geometry_rows=15
 hidescrollbar=false
 hidemenubar=true
 hideclosebutton=false
