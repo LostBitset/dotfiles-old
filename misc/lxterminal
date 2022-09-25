@@ -1,6 +1,6 @@
 # Beryllium theme colours
 [general]
-fontname=Monospace 18
+fontname=Monospace 16
 selchars=-A-Za-z0-9,./?%&#:_
 scrollback=5000
 bgcolor=rgba(24,25,26,0.95)
