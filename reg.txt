@@ -25,6 +25,7 @@ hbin/this ~/bin/this
 hbin/utopw ~/bin/WORKAROUNDS/utopw
 misc/condarc ~/.condarc
 misc/inputrc ~/.inputrc
+misc/lxterminal ~/.config/lxterminal/lxterminal.conf
 misc/newtab ~/firefox_newtab.html
 misc/nobeep /etc/modprobe.d/nobeep.conf
 misc/default-grub /etc/default/grub
