@@ -7,6 +7,9 @@ alias hcode='code .; exit'
 alias gnh='gnvim . & exit'
 alias cldn='rm ~/Downloads/*'
 
+# Lets you write `loop cargo check; done`
+alias loop='while :; sleep 2; clear; '
+
 # THE FOLLOWING ALIASES OVERWRITE EXISTING
 # BINARIES ON THE PATH
 if [[ "$Y_BASH_NoOverwriteAliases" -ne "1" ]]; then
