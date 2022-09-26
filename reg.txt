@@ -21,6 +21,7 @@ hbin/pip3-up ~/bin/pip3-up
 hbin/runvpn ~/bin/runvpn
 hbin/shcap ~/bin/shcap
 hbin/shcap-py ~/shcap.py
+hbin/thenc ~/bin/thenc
 hbin/this ~/bin/this
 hbin/utopw ~/bin/WORKAROUNDS/utopw
 misc/condarc ~/.condarc
