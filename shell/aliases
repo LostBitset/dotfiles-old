@@ -6,6 +6,7 @@ alias hotspot='nmcli con up Hotspot'
 alias hcode='code .; exit'
 alias gnh='gnvim . & exit'
 alias cldn='rm ~/Downloads/*'
+alias zl='thenc z'
 
 # Lets you write stuff like `loop cargo check; done`
 alias loop='while :; do sleep 2; clear; '
