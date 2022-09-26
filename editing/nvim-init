@@ -39,5 +39,7 @@ nnoremap <M-s> :Fern . -drawer<CR><C-w><C-w>
 
 nnoremap <M-k> <C-w><C-w>:w<CR><C-w><C-w>
 
+nnoremap <C-/> <C-w><C-w><C-l><C-w><C-w>
+
 let g:lsp_document_code_action_signs_enabled = 0
 
