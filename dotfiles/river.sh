@@ -28,8 +28,8 @@ riverctl map layout-ctrl None Left send-layout-cmd rivertile "main-location left
 riverctl map layout-ctrl None Right send-layout-cmd rivertile "main-location right"
 
 riverctl declare-mode passthrough
-riverctl map normal Super A enter-mode passthrough
-riverctl map passthrough Super A enter-mode normal
+riverctl map normal Mod4 A enter-mode passthrough
+riverctl map passthrough Mod4 A enter-mode normal
 
 riverctl map normal Mod4+Shift V exit
 
