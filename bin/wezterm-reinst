@@ -13,8 +13,6 @@ echo "Downloaded $INSTALLNAME."
 echo "Cleaning up..."
 mv $INSTALLNAME $LOCATION
 chmod +x $LOCATION
-echo "Installed $INSTALLNAME (from $REPONAME)."
-export WEZTERM_INSTALL="$LOCATION"
-echo "Set WEZTERM_INSTALL=$WEZTERM_INSTALL."
+echo "Installed $INSTALLNAME (from $REPONAME), as $LOCATION."
 echo "All done."
 
