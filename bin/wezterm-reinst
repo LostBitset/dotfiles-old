@@ -11,7 +11,7 @@ echo "Got $RELEASENAME, downloading $INSTALLNAME..."
 curl -LO "https://github.com/$REPONAME/releases/download/$RELEASENAME/$INSTALLNAME"
 echo "Downloaded $INSTALLNAME."
 echo "Cleaning up..."
-mv WezTerm-$INSTALLNAME $LOCATION
+mv $INSTALLNAME $LOCATION
 chmod +x $LOCATION
 echo "Installed $INSTALLNAME (from $REPONAME)."
 export WEZTERM_INSTALL="$LOCATION"
