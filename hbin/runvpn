@@ -1,8 +1,0 @@
-#!/bin/bash
-
-fst="$1"
-
-[[ "$fst" == "" ]] && fst="us"
-
-sudo -k openvpn ~/openvpn_cfgdir/$fst-*.udp.ovpn
-

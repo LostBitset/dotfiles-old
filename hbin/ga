@@ -1,5 +1,0 @@
-#!/bin/bash
-
-cd `zoxide query $1 | head -n 1`
-gnvim .
-

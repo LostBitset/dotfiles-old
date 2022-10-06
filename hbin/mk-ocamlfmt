@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cat $HOME/.config/default-ocamlformat > .ocamlformat
-

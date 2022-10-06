@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo 'pip3-up: Begin. Checking for packages...'
-
-python3 -m pip list --outdated --format=freeze | grep -v '^\-e' | sed 's/\=.*//g' | xargs -n 1 python3 -m pip install -U 2>&1 | grep 'at least one requirement' >/dev/null && echo 'pip3-up: No updates necessary' || echo 'pip3-up: Update complete'
-
