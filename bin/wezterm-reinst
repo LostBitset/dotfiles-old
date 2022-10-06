@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LOCATION="$HOME/WezTerm.AppImage"
+REPONAME="wez/wezterm"
+ASSETENDING="Ubuntu18.04.AppImage"
+rm $LOCATION
+RELEASENAME=`curl --silent "https://api.github.com/repos/$REPONAME/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'`
+curl -LO "https://github.com/$REPONAME/releases/download/$RELEASENAME/WezTerm-$RELEASENAME-$ASSETENDING"
+mv WezTerm-$RELEASENAME-$ASSETENDING $LOCATION
+chmod +x $LOCATION
+
