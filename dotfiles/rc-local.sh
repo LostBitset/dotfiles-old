@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # DOTFILE: /etc/rc.local
+# >>>>>>>> #!/bin/bash
 # >>>>>>>> <initial contents>
 # >>>>>>>> source <repo>/dotfiles/rc-local.sh
 
