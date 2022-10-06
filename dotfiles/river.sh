@@ -35,6 +35,12 @@ riverctl map passthrough Mod4 A enter-mode normal
 
 riverctl map normal Mod4+Shift V exit
 
+for mode in normal locked; do
+	riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 5'
+	riverctl map $mode None XF86AudioLowerVolume spawn 'pamixer -d 5'
+	riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
+done
+
 riverctl background-color 0x252525
 riverctl border-color-focused 0xDC7633
 riverctl border-color-unfocused 0x252525
