@@ -13,6 +13,8 @@ riverctl map normal Mod4 H focus-view previous
 riverctl map normal Mod4 L focus-view next
 riverctl map normal Mod4 B zoom
 
+riverctl map normal Mod4 F toggle-fullscreen
+
 riverctl declare-mode layout-ctrl
 riverctl map normal Mod4 Y enter-mode layout-ctrl
 riverctl map layout-ctrl Mod4 Y enter-mode normal
