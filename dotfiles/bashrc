@@ -19,6 +19,9 @@ export SDL_VIDEODRIVER=wayland
 # Export the location of the WezTerm terminal emulator
 export WEZTERM_INSTALL="$HOME/WezTerm.AppImage"
 
+# Export the location of the background image
+export BG_INTENT="$HOME/SystemAssets/background.gif"
+
 # Add stuff to the PATH
-export PATH="$PATH:$HOME/dotfiles/bin"
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
