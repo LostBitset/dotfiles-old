@@ -1,0 +1,17 @@
+# Set XDG_RUNTIME_DIR to the directory created in /etc/rc.local
+export XDG_RUNTIME_DIR="/run/user/$USER"
+
+# Use the standard XDG_CONFIG_HOME
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# Fix the dumb wayland cursors issue
+export WLR_NO_HARDWARE_CURSORS=1
+
+# Let applications use wayland
+export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland-egl
+export SDL_VIDEODRIVER=wayland
+
+# Add stuff to the PATH
+export PATH="$PATH:$HOME/dotfiles/bin"
+
