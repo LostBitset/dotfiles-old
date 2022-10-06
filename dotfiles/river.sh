@@ -47,6 +47,8 @@ riverctl border-color-unfocused 0x252525
 
 riverctl set-repeat 50 300
 
+riverctl spawn 'dbus-run-session pulseaudio --start'
+
 riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6
 
