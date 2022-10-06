@@ -4,3 +4,5 @@ This is designed to be used by having the actual dotfiles (like `$HOME/.bashrc`)
 
 The `bin` directory contains the aforementioned helpful scripts, it should be added to your `$PATH`, and don't forget to run `chmod +x bin/*`.
 
+Also, you can't do `source <repo>/dotfiles/river.sh` if your `$XDG_CONFIG_HOME/river/init` starts with `#!/bin/sh`, like in the example config. Using `bash` works fine, and `zsh` should work too. 
+
