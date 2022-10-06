@@ -1,3 +1,7 @@
+# DOTFILE: $HOME/.bashrc
+# >>>>>>>> <initial contents>
+# >>>>>>>> source <repo>/dotfiles/bashrc
+
 # Set XDG_RUNTIME_DIR to the directory created in /etc/rc.local
 export XDG_RUNTIME_DIR="/run/user/$USER"
 

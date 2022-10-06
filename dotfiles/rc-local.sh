@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# DOTFILE: /etc/rc.local
+# >>>>>>>> <initial contents>
+# >>>>>>>> source <repo>/dotfiles/rc-local.sh
+
 # Create a directory in /run/user for each user
 # This is designed to be used as their $XDG_RUNTIME_DIR
 cat /etc/passwd | awk -F ':' '{print $1}' | while read u; do

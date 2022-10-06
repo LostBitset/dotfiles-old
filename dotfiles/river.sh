@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# DOTFILE: $XDG_CONFIG_HOME/river/init
+# >>>>>>>> #!/bin/bash
+# >>>>>>>> source <repo>/dotfiles/river.sh
+
 riverctl map normal Mod4+Shift Q spawn "xterm -fg green -bg black"
 riverctl map normal Mod4 Q spawn "$WEZTERM_INSTALL"
 riverctl map normal Mod4 W spawn firefox
