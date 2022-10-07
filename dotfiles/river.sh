@@ -49,6 +49,9 @@ riverctl set-repeat 50 300
 
 riverctl spawn 'pulseaudio --start'
 
+riverctl spawn 'swww init'
+riverctl spawn 'swww img $BG_INTENT'
+
 riverctl default-layout rivertile
 rivertile -view-padding 6 -outer-padding 6
 
