@@ -21,7 +21,7 @@ COL_WHT='\033[1;37m'
 COL_END='\033[0m'
 
 # Set PS1
-PS1="[\\u@\\h ${COL_DGR}\\W${COL_END}]\$ "
+PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})>${COL_END} "
 
 # Set XDG_RUNTIME_DIR to the directory created in /etc/rc.local
 export XDG_RUNTIME_DIR="/run/user/$USER"
