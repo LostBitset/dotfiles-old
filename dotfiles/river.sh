@@ -35,6 +35,17 @@ riverctl map passthrough Mod4 A enter-mode normal
 
 riverctl map normal Mod4+Shift V exit
 
+for i in $(seq 1 9)
+do
+    tags=$((1 << ($i - 1)))
+
+    # Super+[1-9] to tag focused view with tag [0-8]
+    riverctl map normal Super+Shift $i set-view-tags $tags
+
+    # Super+Shift+[1-9] to toggle focus of tag [0-8]
+    riverctl map normal Super $i toggle-focused-tags $tags
+done
+
 for mode in normal locked; do
 	riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 5'
 	riverctl map $mode None XF86AudioLowerVolume spawn 'pamixer -d 5'
