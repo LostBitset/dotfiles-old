@@ -40,10 +40,10 @@ do
     tags=$((1 << ($i - 1)))
 
     # Super+[1-9] to tag focused view with tag [0-8]
-    riverctl map normal Super+Shift $i set-view-tags $tags
+    riverctl map normal Mod4+Shift $i set-view-tags $tags
 
     # Super+Shift+[1-9] to toggle focus of tag [0-8]
-    riverctl map normal Super $i toggle-focused-tags $tags
+    riverctl map normal Mod4 $i toggle-focused-tags $tags
 done
 
 for mode in normal locked; do
