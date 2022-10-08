@@ -5,7 +5,7 @@
 # >>>>>>>> source <repo>/dotfiles/river.sh
 
 riverctl map normal Mod4+Shift Q spawn "xterm -fg green -bg black"
-riverctl map normal Mod4 Q spawn "$WEZTERM_INSTALL"
+riverctl map normal Mod4 Q spawn wezterm
 riverctl map normal Mod4 W spawn firefox
 
 riverctl map normal Mod4 U close
