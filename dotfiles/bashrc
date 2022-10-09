@@ -46,3 +46,23 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 # Add stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
+# Splash screen
+if [[ "$(tty)" == "/dev/tty1" ]]; then
+	clear
+	xbps-install -S
+	clear
+	neofetch
+	read -p "Would you like to start River? [Y/n]:"
+	if [[ "$REPLY" == "" ]]; then
+		river
+	elif [[ "$REPLY" == "y" ]]; then
+		river
+	elif [[ "$REPLY" == "n" ]]; then
+		clear
+	else
+		echo "Invalid option, dropping you back into bash..."
+		sleep 1
+		clear
+	fi
+fi
+
