@@ -54,7 +54,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	fi
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
-		xbps-install -S
+		sudo xbps-install -S
 		clear
 		nix-shell -p neofetch --command 'sh -c "clear; neofetch"'
 		read -p "Would you like to start River? [Y/n]:"
