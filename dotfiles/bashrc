@@ -48,13 +48,14 @@ export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
 # Splash screen
 if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
+	# Don't do it twice
+	export SUPRESS_TTYSPLASH=1
+
 	# Requires nix-shell, which is inside .bash_profile
 	if [ -e /home/hkt/.nix-profile/etc/profile.d/nix.sh ]; then
 		. /home/hkt/.nix-profile/etc/profile.d/nix.sh
 	fi
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
-		clear
-		sudo xbps-install -S
 		clear
 		nix-shell -p neofetch --command 'sh -c "clear; neofetch"'
 		read -p "Would you like to start River? [Y/n]:"
@@ -73,7 +74,4 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		fi
 	fi
 fi
-
-# Don't do it twice
-export SUPRESS_TTYSPLASH=1
 
