@@ -47,24 +47,33 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
 # Splash screen
-if [[ "$(tty)" == "/dev/tty1" ]]; then
-	clear
-	xbps-install -S
-	clear
-	neofetch
-	read -p "Would you like to start River? [Y/n]:"
-	if [[ "$REPLY" == "" ]]; then
-		river
-		exit
-	elif [[ "$REPLY" == "y" ]]; then
-		river
-		exit
-	elif [[ "$REPLY" == "n" ]]; then
+if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
+	# Requires nix-shell, which is inside .bash_profile
+	if [ -e /home/hkt/.nix-profile/etc/profile.d/nix.sh ]; then
+		. /home/hkt/.nix-profile/etc/profile.d/nix.sh
+	fi
+	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
-	else
-		echo "Invalid option, dropping you back into bash..."
-		sleep 1
+		xbps-install -S
 		clear
+		nix-shell -p neofetch --command 'sh -c "clear; neofetch"'
+		read -p "Would you like to start River? [Y/n]:"
+		if [[ "$REPLY" == "" ]]; then
+			river
+			exit
+		elif [[ "$REPLY" == "y" ]]; then
+			river
+			exit
+		elif [[ "$REPLY" == "n" ]]; then
+			clear
+		else
+			echo "Invalid option, dropping you back into bash..."
+			sleep 1
+			clear
+		fi
 	fi
 fi
+
+# Don't do it twice
+export SUPRESS_TTYSPLASH=1
 
