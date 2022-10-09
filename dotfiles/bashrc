@@ -55,8 +55,10 @@ if [[ "$(tty)" == "/dev/tty1" ]]; then
 	read -p "Would you like to start River? [Y/n]:"
 	if [[ "$REPLY" == "" ]]; then
 		river
+		exit
 	elif [[ "$REPLY" == "y" ]]; then
 		river
+		exit
 	elif [[ "$REPLY" == "n" ]]; then
 		clear
 	else
