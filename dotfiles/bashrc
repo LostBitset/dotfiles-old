@@ -46,6 +46,10 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 # Add stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
+# Have nix-collect-garbage also delete old log files from automatic update on login
+alias nix-collect-garbage='echo "deleting auto-update logs..."; touch /tmp/.auto-nix-nothing; rm /tmp/.auto-nix-*; nix-collect-garbage'
+
+# A message for when the river session ends
 RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
 
 # Splash screen
