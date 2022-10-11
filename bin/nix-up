@@ -8,12 +8,13 @@ NIXUP_INSTALLED="$(mktemp).nixup-list"
 nix-env -q | grep -v '^nix-[0-9]' >$NIXUP_INSTALLED
 sed -i 's/\-[0-9].*$//g' $NIXUP_INSTALLED
 echo "Uninstalling all packages..."
-nix-env -e '*'
+cat $NIXUP_INSTALLED | xargs -n 1 nix-env -e
+sed -i 's/\-.*$//g' $NIXUP_INSTALLED
 echo "Starting nix repl..."
 NIXUP_NAMEDPIPE="$(mktemp).nixup-namedpipe"
 mkfifo $NIXUP_NAMEDPIPE
 NIXUP_REPLDONE_SIGNAL="$(mktemp).nixup-repldone"
-(nix repl <$NIXUP_NAMEDPIPE; touch $NIXUP_REPLDONE_SIGNAL) &
+(nix repl 2>/dev/null <$NIXUP_NAMEDPIPE | grep -v '^$'; touch $NIXUP_REPLDONE_SIGNAL) &
 echo "Loading nixpkgs..."
 echo ":load <nixpkgs>" >$NIXUP_NAMEDPIPE
 echo "Installing all packages..."
@@ -28,6 +29,6 @@ until [ -f $NIXUP_REPLDONE_SIGNAL ]; do
 done
 echo "The nix repl finished, cleaning up..."
 rm $NIXUP_REPLDONE_SIGNAL $NIXUP_INSTALLED $NIXUP_NAMEDPIPE
-nix-collect-garbage
+`which nix-collect-garbage`
 echo "nix-up: All done."
 
