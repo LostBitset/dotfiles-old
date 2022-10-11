@@ -57,7 +57,11 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	fi
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
+		# Update channels used by nix-env in the background
+		(nix-channel --update 2>/dev/null; echo "Done updating nix channels.") &
+		# Neofetch!
 		nix-shell -p neofetch --command 'sh -c "clear; neofetch"'
+		# Then start river...
 		read -p "Would you like to start River? [Y/n]:"
 		if [[ "$REPLY" == "" ]]; then
 			river
