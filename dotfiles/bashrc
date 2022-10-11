@@ -64,16 +64,10 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
 		# Update channels used by nix-env in the background
-		(
-			nix-channel --update 2>/tmp/.auto-nix-channel-logs
-			echo "Done updating nix channels."
-			nix-env -u '*' 2>/tmp/.auto-nix-env-logs
-			echo "Done upgrading nix packages."
-			`which nix-collect-garbage` 2>/tmp/.auto-nix-gc-logs
-			echo "Done with cleaning up nix store."
-			echo "Nix full upgrade: all done."
-		) &
-		sleep 0.75
+		echo ">>> Starting nix auto-update... <<<"
+		echo "note: all packages will be reinstalled"
+		nix-up
+		echo ">>> Finished nix auto-update. <<<"
 		# Neofetch!
 		clear
 		neofetch
