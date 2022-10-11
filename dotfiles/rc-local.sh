@@ -15,3 +15,10 @@ cat /etc/passwd | awk -F ':' '{print $1}' | while read u; do
 	chown $u $dir
 done
 
+# Clear the console if the file /.supress-rclocal-clear doesn't exist
+if [ -f /.supress-rclocal-clear ]; then
+	echo "rc-local.sh: /.supress-rclocal-clear was found."
+else
+	clear
+fi
+
