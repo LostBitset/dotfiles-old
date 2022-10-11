@@ -62,7 +62,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		# Neofetch!
 		nix-shell -p neofetch --command 'sh -c "clear; neofetch"'
 		# Then start river...
-		read -p "Would you like to start River? [Y/n]:"
+		read -p "Would you like to start River? [Y/n]: "
 		if [[ "$REPLY" == "" ]]; then
 			river
 			exit
