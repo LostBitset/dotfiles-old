@@ -46,6 +46,8 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 # Add stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
+RIVER_ENDMSG="${COL_CYA}The river session ended, and you have been logged out.${COL_END}"
+
 # Splash screen
 if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	# Don't do it twice
@@ -65,9 +67,13 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		read -p "Would you like to start River? [Y/n]: "
 		if [[ "$REPLY" == "" ]]; then
 			river
+			clear
+			echo "$RIVER_ENDMSG"
 			exit
 		elif [[ "$REPLY" == "y" ]]; then
 			river
+			clear
+			echo "$RIVER_ENDMSG"
 			exit
 		elif [[ "$REPLY" == "n" ]]; then
 			clear
