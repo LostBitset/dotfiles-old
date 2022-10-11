@@ -46,7 +46,7 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 # Add stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
-RIVER_ENDMSG="${COL_CYA}The river session ended, and you have been logged out.${COL_END}"
+RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
 
 # Splash screen
 if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
