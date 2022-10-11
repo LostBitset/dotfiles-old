@@ -69,7 +69,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		echo "note: all packages will be reinstalled"
 		nix-up
 		echo "note: all auto-update logs will now be deleted"
-		sleep 1
+		sleep 0.4
 		"$NIXAUTOUPDATE_RMLOGS"
 		echo ">>> Finished nix auto-update. <<<"
 		# Neofetch!
