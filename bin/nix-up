@@ -1,0 +1,33 @@
+#!/bin/bash
+
+echo "nix-up: Updating all nix-packages..."
+echo "Updating nix channels..."
+nix-channel --update
+echo "Grabbing all installed packages..."
+NIXUP_INSTALLED="$(mktemp).nixup-list"
+nix-env -q | grep -v '^nix-[0-9]' >$NIXUP_INSTALLED
+sed -i 's/\-[0-9].*$//g' $NIXUP_INSTALLED
+echo "Uninstalling all packages..."
+nix-env -e '*'
+echo "Starting nix repl..."
+NIXUP_NAMEDPIPE="$(mktemp).nixup-namedpipe"
+mkfifo $NIXUP_NAMEDPIPE
+NIXUP_REPLDONE_SIGNAL="$(mktemp).nixup-repldone"
+(nix repl <$NIXUP_NAMEDPIPE; touch $NIXUP_REPLDONE_SIGNAL) &
+echo "Loading nixpkgs..."
+echo ":load <nixpkgs>" >$NIXUP_NAMEDPIPE
+echo "Installing all packages..."
+cat $NIXUP_INSTALLED | while read pkgname; do
+	echo ":i $pkgname" >$NIXUP_NAMEDPIPE
+done
+echo "Telling the nix repl to quit when done..."
+echo ":quit" >$NIXUP_NAMEDPIPE
+echo "Waiting for the nix repl to finish..."
+until [ -f $NIXUP_REPLDONE_SIGNAL ]; do
+	sleep 0.1
+done
+echo "The nix repl finished, cleaning up..."
+rm $NIXUP_REPLDONE_SIGNAL $NIXUP_INSTALLED $NIXUP_NAMEDPIPE
+nix-collect-garbage
+echo "nix-up: All done."
+
