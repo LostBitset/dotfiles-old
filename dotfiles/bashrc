@@ -69,7 +69,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 			echo "Done updating nix channels."
 			nix-env -u '*' 2>/tmp/.auto-nix-env-logs
 			echo "Done upgrading nix packages."
-			nix-collect-garbage 2>/tmp/.auto-nix-gc-logs
+			`which nix-collect-garbage` 2>/tmp/.auto-nix-gc-logs
 			echo "Done with cleaning up nix store."
 			echo "Nix full upgrade: all done."
 		) &
