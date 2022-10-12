@@ -1,4 +1,8 @@
 #!/bin/bash
 
-timeout $1 sh -c 'ping -c1 wikipedia.org || yes >/dev/null'
+if [[ $2 ]]; then
+	timeout $1 sh -c "ping -c1 $2 || yes >/dev/null"
+else
+	timeout $1 sh -c 'ping -c1 wikipedia.org || yes >/dev/null'
+fi
 

@@ -65,6 +65,8 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
 		# Update channels used by nix-env in the background
+		echo ">>> Waiting for network... <<<"
+		waitnet 5 nixos.org
 		echo ">>> Starting nix auto-update... <<<"
 		echo "note: all packages will be reinstalled"
 		nix-up
