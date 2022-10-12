@@ -1,0 +1,4 @@
+#!/bin/bash
+
+timeout $1 sh -c 'ping -c1 wikipedia.org || yes >/dev/null'
+
