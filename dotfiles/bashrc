@@ -46,10 +46,6 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 # Add stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
-# Have nix-collect-garbage also delete old log files from automatic update on login
-NIXAUTOUPDATE_RMLOGS='echo "deleting auto-update logs..."; touch /tmp/.auto-nix-nothing; rm /tmp/.auto-nix-*'
-alias nix-collect-garbage="$NIXAUTOUPDATE_RMLOGS; nix-collect-garbage"
-
 # A message for when the river session ends
 RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
 
@@ -67,25 +63,22 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		# Update channels used by nix-env in the background
 		echo ">>> Waiting for network... <<<"
 		waitnet 5 nixos.org
-		echo ">>> Starting nix auto-update... <<<"
-		echo "note: all packages will be reinstalled"
-		nix-up
-		echo "note: all auto-update logs will now be deleted"
-		sleep 0.4
-		"$NIXAUTOUPDATE_RMLOGS"
-		echo ">>> Finished nix auto-update. <<<"
+		echo ">>> Updating nix channels... <<<"
+		nix-channel --update
+		echo ">>> Setting up the main nix-shell... <<<"
+		NIXSHELLRUN="-p $(cat $HOME/nix-uselist | sed 's/,/ -p /g') --command"
 		# Neofetch!
 		clear
 		neofetch
 		# Then start river...
 		read -p "Would you like to start River? [Y/n]: "
 		if [[ "$REPLY" == "" ]]; then
-			river
+			nix-shell $NIXSHELLRUN river
 			clear
 			echo "$RIVER_ENDMSG"
 			exit
 		elif [[ "$REPLY" == "y" ]]; then
-			river
+			nix-shell $NIXSHELLRUN river
 			clear
 			echo "$RIVER_ENDMSG"
 			exit
