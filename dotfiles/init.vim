@@ -27,6 +27,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'tikhomirov/vim-glsl'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'lambdalisue/fern.vim'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 

@@ -21,7 +21,8 @@ COL_WHT='\033[1;37m'
 COL_END='\033[0m'
 
 # Set PS1
-PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})>${COL_END} "
+export ORIG_PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})>${COL_END} "
+PS1="$ORIG_PS1"
 
 # Set XDG_RUNTIME_DIR to the directory created in /etc/rc.local
 export XDG_RUNTIME_DIR="/run/user/$USER"
@@ -80,12 +81,12 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		# Then start river...
 		read -p "Would you like to start River? [Y/n]: "
 		if [[ "$REPLY" == "" ]]; then
-			river
+			nix-shell -p glibcLocales --command 'river'
 			clear
 			echo "$RIVER_ENDMSG"
 			exit
 		elif [[ "$REPLY" == "y" ]]; then
-			river
+			nix-shell -p glibcLocales --command 'river'
 			clear
 			echo "$RIVER_ENDMSG"
 			exit

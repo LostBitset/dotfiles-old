@@ -9,7 +9,7 @@ nix-env -q | grep -v '^nix-[0-9]' >$NIXUP_INSTALLED
 sed -i 's/\-[0-9].*$//g' $NIXUP_INSTALLED
 echo "Uninstalling all packages..."
 cat $NIXUP_INSTALLED | xargs -n 1 nix-env -e
-sed -i 's/\-.*$//g' $NIXUP_INSTALLED
+sed -i 's/\-unstable$//g' $NIXUP_INSTALLED
 echo "Starting nix repl..."
 NIXUP_NAMEDPIPE="$(mktemp).nixup-namedpipe"
 mkfifo $NIXUP_NAMEDPIPE
@@ -18,7 +18,7 @@ NIXUP_REPLDONE_SIGNAL="$(mktemp).nixup-repldone"
 echo "Loading nixpkgs..."
 echo ":load <nixpkgs>" >$NIXUP_NAMEDPIPE
 echo "Installing all packages..."
-cat $NIXUP_INSTALLED | while read pkgname; do
+cat $NIXUP_INSTALLED | sed -r 's/-(.)/\u\1/g' | while read pkgname; do
 	echo ":i $pkgname" >$NIXUP_NAMEDPIPE
 done
 echo "Telling the nix repl to quit when done..."
