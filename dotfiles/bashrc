@@ -51,6 +51,9 @@ export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 NIXAUTOUPDATE_RMLOGS='echo "deleting auto-update logs..."; touch /tmp/.auto-nix-nothing; rm /tmp/.auto-nix-*'
 alias nix-collect-garbage="$NIXAUTOUPDATE_RMLOGS; nix-collect-garbage"
 
+# River but with the glibc-locales fix
+alias river-with-locales='echo ">>> Running river through nix-shell to fix locale issues... <<<"; nix-shell -p glibcLocales --command river'
+
 # A message for when the river session ends
 RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
 
@@ -81,12 +84,12 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		# Then start river...
 		read -p "Would you like to start River? [Y/n]: "
 		if [[ "$REPLY" == "" ]]; then
-			nix-shell -p glibcLocales --command 'river'
+			river-with-locales
 			clear
 			echo "$RIVER_ENDMSG"
 			exit
 		elif [[ "$REPLY" == "y" ]]; then
-			nix-shell -p glibcLocales --command 'river'
+			river-with-locales
 			clear
 			echo "$RIVER_ENDMSG"
 			exit
