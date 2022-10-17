@@ -1,0 +1,4 @@
+#!/bin/bash
+
+grim "$HOME/Screenshots/img_$(date +%d%b%Hh%Mm_%N).png"
+

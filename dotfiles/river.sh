@@ -52,6 +52,8 @@ for mode in normal locked; do
 	riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
 done
 
+riverctl map normal Mod4 C 'scrshot'
+
 riverctl background-color 0x252525
 riverctl border-color-focused 0xDC7633
 riverctl border-color-unfocused 0x252525
