@@ -4,6 +4,13 @@ bar:
   background: 000000ff
 
   left:
+    - battery:
+      name: BAT0
+      content:
+        - string: {text: , font: "Font Awesome 5 Free:style=solid:size=16"}
+    - string: {text: "{capacity}%"}
+
+  center:
     - river:
         title:
           - string:
@@ -29,13 +36,6 @@ bar:
                       string:
                         margin: 5
                         text: "{id}"
-
-  center:
-    - battery:
-        name: BAT0
-        content:
-          - string: {text: , font: "Font Awesome 5 Free:style=solid:size=16"}
-          - string: {text: "{capacity}%"}
 
   right:
     - clock:
