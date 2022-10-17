@@ -58,11 +58,8 @@ riverctl border-color-unfocused 0x252525
 
 riverctl set-repeat 50 300
 
-# For some lame reason, I have to start and then stop pulseaudio once, and then start it again
-# Then it works *sigh*
-timeout 3 pulseaudio --start
-
-riverctl spawn '(sleep 4; pulseaudio --start)'
+# PulseAudio
+riverctl spawn 'pulseaudio --realtime --start'
 
 # swww for wallpaper
 riverctl spawn 'swww init'
