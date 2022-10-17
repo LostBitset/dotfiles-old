@@ -68,5 +68,5 @@ riverctl spawn 'swww init'
 riverctl spawn 'swww img $BG_INTENT'
 
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6
+rivertile -view-padding 0 -outer-padding 0
 
