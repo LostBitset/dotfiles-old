@@ -5,10 +5,10 @@ bar:
 
   left:
     - battery:
-      name: BAT0
-      content:
-        - string: {text: , font: "Font Awesome 5 Free:style=solid:size=16"}
-    - string: {text: "{capacity}%"}
+        name: BAT0
+        content:
+          - string: {text: , font: "Font Awesome 5 Free:style=solid:size=16"}
+          - string: {text: "{capacity}%"}
 
   center:
     - river:
