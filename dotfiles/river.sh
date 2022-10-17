@@ -62,10 +62,14 @@ riverctl set-repeat 50 300
 # Then it works *sigh*
 timeout 3 pulseaudio --start
 
-riverctl spawn 'pulseaudio --start'
+riverctl spawn '(sleep 4; pulseaudio --start)'
 
+# swww for wallpaper
 riverctl spawn 'swww init'
 riverctl spawn 'swww img $BG_INTENT'
+
+# I use yambar
+riverctl spawn 'yambar'
 
 riverctl default-layout rivertile
 rivertile -view-padding 0 -outer-padding 0
