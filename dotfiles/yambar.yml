@@ -6,6 +6,7 @@ bar:
   left:
     - battery:
         name: BAT0
+        poll-interval: 5
         content:
           - string: {text: , font: "Font Awesome 5 Free:style=solid:size=16"}
           - string: {text: "{capacity}% ({state})"}
