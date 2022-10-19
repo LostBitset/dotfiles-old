@@ -5,5 +5,7 @@ if [[ "$1" == "" ]]; then
 else
 	TARGET_CMD="$1"
 fi
-eval "nix-shell -p $(cat .nix_shell_deps) --command $TARGET_CMD"
+NSDEPS="$(cat .nix_shell_deps)"
+echo $NSDEPS | tr ' ' '\n' | grep '^gh$' >/dev/null && TARGET_CMD="scoped-gh $TARGET_CMD"
+eval "nix-shell -p $NSDEPS --command $TARGET_CMD"
 
