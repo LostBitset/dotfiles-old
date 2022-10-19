@@ -5,7 +5,10 @@ if [[ "$1" == "" ]]; then
 else
 	TARGET_CMD="$1"
 fi
-NSDEPS="$(cat .nix_shell_deps)"
+NSDEPS_FILE=".nix_shell_deps"
+GIT_TL_CMD="git rev-parse --show-toplevel"
+eval "$GIT_TL_CMD" && NSDEPS="$(GIT_TL_CMD)/$NSDEPS"
+NSDEPS="$(cat $NSDEPS_FILE)"
 eval "nix-shell -p $NSDEPS --command $TARGET_CMD"
 echo $NSDEPS | tr ' ' '\n' | grep '^gh$' >/dev/null && git config --list | grep 'github\.com\.helper' | sed 's/=.*//' | xargs -n 1 git config --global --unset-all
 
