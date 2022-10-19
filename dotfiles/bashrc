@@ -67,6 +67,13 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	fi
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
+		# Wait for the network
+		waitnet 5
+		# Update wezterm (it's an AppImage from GitHub)
+		echo ">>> startup task: Reinstalling WezTerm... <<<"
+		wezterm-reinst
+		echo ">>> startup task: Updating nix channels... <<<"
+		nix-channel --update
 		clear
 		neofetch
 		# Then start river...
