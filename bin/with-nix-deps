@@ -6,6 +6,6 @@ else
 	TARGET_CMD="$1"
 fi
 NSDEPS="$(cat .nix_shell_deps)"
-echo $NSDEPS | tr ' ' '\n' | grep '^gh$' >/dev/null && TARGET_CMD="scoped-gh $TARGET_CMD"
 eval "nix-shell -p $NSDEPS --command $TARGET_CMD"
+echo $NSDEPS | tr ' ' '\n' | grep '^gh$' >/dev/null && git config --list | grep 'github\.com\.helper' | sed 's/=.*//' | xargs -n 1 git config --global --unset-all
 

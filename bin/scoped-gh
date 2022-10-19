@@ -1,6 +1,0 @@
-#!/bin/bash
-
-gh auth setup-git
-$1
-git config --list | grep 'github\.com\.helper' | sed 's/=.*//' | xargs -n 1 git config --global --unset-all
-

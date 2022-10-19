@@ -53,6 +53,9 @@ alias rundesktop="(cd $HOME/dotfiles/desktop; with-nix-deps river)"
 # A message for when the river session ends
 RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
 
+# Setup gh as a credential helper in git if this hasn't already been done
+git config --global --list | grep 'github\.com\.helper' >/dev/null || gh auth setup-git 2>/dev/null || true
+
 # Splash screen
 if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	# Don't do it twice
