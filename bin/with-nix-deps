@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ "$1" == "" ]]; then
+	TARGET_CMD="$SHELL"
+else
+	TARGET_CMD="$1"
+fi
+eval "nix-shell -p $(cat .nix_shell_deps) --command $TARGET_CMD"
+
