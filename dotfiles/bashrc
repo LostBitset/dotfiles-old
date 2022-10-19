@@ -68,7 +68,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
 		# Wait for the network
-		waitnet 5
+		waitnet 5 api.github.com
 		# Update wezterm (it's an AppImage from GitHub)
 		echo ">>> startup task: Reinstalling WezTerm... <<<"
 		wezterm-reinst
