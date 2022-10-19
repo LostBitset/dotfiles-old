@@ -48,7 +48,7 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
 # An alias for using with-nix-deps to run river
-alias rundesktop="(cd $HOME/dotfiles/desktop; with-nix-deps river)"
+alias rundesktop="(cd $HOME/dotfiles; with-nix-deps river)"
 
 # A message for when the river session ends
 RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
