@@ -1,0 +1,6 @@
+#!/bin/bash
+
+RUSTUP_TOOLCHAIN_FOUND_NAME="$(rustup show | grep '(default)' | cut -d '-' -f -1)"
+rustup toolchain uninstall $RUSTUP_TOOLCHAIN_FOUND_NAME
+rustup toolchain install $RUSTUP_TOOLCHAIN_FOUND_NAME
+

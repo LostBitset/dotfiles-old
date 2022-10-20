@@ -56,6 +56,9 @@ RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
 # Setup gh as a credential helper in git if this hasn't already been done
 git config --global --list | grep 'github\.com\.helper' >/dev/null || gh auth setup-git 2>/dev/null || true
 
+# If rustup is broken, reinstall the toolchain
+rustup show >/dev/null 2>&1 && (rustc >/dev/null 2>&1 || rustup-re stable) || true
+
 # Splash screen
 if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	# Don't do it twice
