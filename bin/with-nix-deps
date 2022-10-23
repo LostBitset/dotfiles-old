@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [[ "$1" == "" ]]; then
-	TARGET_CMD="$SHELL"
+	TARGET_CMD="sh -c \"IN_WND_SHELL=1 $SHELL\""
 else
 	TARGET_CMD="$1"
 fi
 NSDEPS_FILE="$(git rev-parse --show-toplevel)/.nix_shell_deps"
 NSDEPS="$(cat $NSDEPS_FILE)"
-eval "nix-shell -p $NSDEPS --command $TARGET_CMD"
+eval "nix-shell -p $NSDEPS --command '$TARGET_CMD'"
 echo $NSDEPS | tr ' ' '\n' | grep '^gh$' >/dev/null && git config --list | grep 'github\.com\.helper' | sed 's/=.*//' | xargs -n 1 git config --global --unset-all
 

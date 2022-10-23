@@ -21,8 +21,16 @@ COL_WHT='\033[1;37m'
 COL_END='\033[0m'
 
 # Set PS1
-export ORIG_PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})>${COL_END} "
+export ORIG_PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})${COL_END}"
 PS1="$ORIG_PS1"
+
+# Modify PS1 if running inside a with-nix-deps shell
+if [[ "$IN_WND_SHELL" == "1" ]]; then
+	PS1="${COL_DGR}(nix/deps $PS1${COL_DGR})${COL_END}"
+fi
+
+# Finally, add the last bit
+PS1="$PS1${COL_DGR}>${COL_END} "
 
 # Set XDG_RUNTIME_DIR to the directory created in /etc/rc.local
 export XDG_RUNTIME_DIR="/run/user/$USER"
