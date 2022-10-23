@@ -47,6 +47,9 @@ export BG_INTENT="$HOME/SystemAssets/background.gif"
 # Add stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 
+# Add iced binary (for vim-iced) to the path
+export PATH="$PATH:$HOME/.vim/plugged/vim-iced/bin"
+
 # An alias for using with-nix-deps to run river
 alias rundesktop="(cd $HOME/dotfiles; with-nix-deps river)"
 
