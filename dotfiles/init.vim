@@ -30,11 +30,8 @@ Plug 'lambdalisue/fern.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'junegunn/fzf'
 Plug 'guns/vim-sexp', {'for': 'clojure'}
-Plug 'liquidz/vim-iced', {'for': 'clojure'}
 
 call plug#end()
-
-let g:iced_enable_defualt_key_mappings = v:true
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> \     pumvisible() ? "\<C-p>" : "\\"
