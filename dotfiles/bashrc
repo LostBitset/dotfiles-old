@@ -85,7 +85,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		echo ">>> startup task: Reinstalling WezTerm... <<<"
 		ping -c1 api.github.com && wezterm-reinst || echo "Never mind. Cannot access GitHub right now."
 		echo ">>> startup task: Updating nix channels... <<<"
-		nix-channel --update
+		ping -c1 nixos.org && nix-channel --update
 		clear
 		neofetch
 		# Then start river...
