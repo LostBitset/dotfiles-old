@@ -89,23 +89,12 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		clear
 		neofetch
 		# Then start river...
-		read -p "Would you like to start River? [Y/n]: "
-		if [[ "$REPLY" == "" ]]; then
-			rundesktop
-			clear
-			echo "$RIVER_ENDMSG"
+		echo "Starting River in 2 seconds... (press Ctrl+C to abort)"
+		sleep 2
+		(rundesktop; clear; echo "$RIVER_ENDMSG"; touch /tmp/.riversess_ended)
+		if [[ -e /tmp/.riversess_ended ]]; then
+			rm /tmp/.riversess_ended
 			exit
-		elif [[ "$REPLY" == "y" ]]; then
-			rundesktop
-			clear
-			echo "$RIVER_ENDMSG"
-			exit
-		elif [[ "$REPLY" == "n" ]]; then
-			clear
-		else
-			echo "Invalid option, dropping you back into bash..."
-			sleep 1
-			clear
 		fi
 	fi
 fi
