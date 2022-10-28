@@ -63,11 +63,6 @@ riverctl set-repeat 50 300
 # PulseAudio
 riverctl spawn 'pulseaudio --realtime --start'
 
-# swww for wallpaper
-swww kill # Kill the daemon if it previously existed
-riverctl spawn 'swww init'
-riverctl spawn 'swww img $BG_INTENT'
-
 # I use yambar
 riverctl spawn 'yambar'
 
