@@ -21,8 +21,9 @@ COL_WHT='\033[1;37m'
 COL_END='\033[0m'
 
 # Set PS1
-export ORIG_PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})${COL_END}"
-PS1="$ORIG_PS1"
+export ORIG_PS1="$PS1"
+INIT_PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})${COL_END}"
+PS1="$INIT_PS1"
 
 # Modify PS1 if running inside a with-nix-deps shell
 if [[ "$IN_WND_SHELL" == "1" ]]; then
