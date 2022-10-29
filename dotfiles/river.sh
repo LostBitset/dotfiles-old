@@ -63,7 +63,13 @@ riverctl set-repeat 50 300
 # PulseAudio
 riverctl spawn 'pulseaudio --realtime --start'
 
-# I use yambar
+# For some dumb reason, PulseAudio doesn't work unless I play a sound right away
+riverctl spawn 'playsilent'
+
+# SWWW (background)
+riverctl spawn swww-start
+
+# Yambar
 riverctl spawn 'yambar'
 
 riverctl default-layout rivertile
