@@ -1,8 +1,7 @@
 #!/bin/sh
 
-# DOTFILE: $XDG_CONFIG_HOME/river/init
-# >>>>>>>> #!/bin/bash
-# >>>>>>>> source <repo>/dotfiles/river.sh
+# [LINKTO] ~/.config/river/init
+# [LINKEXEC]
 
 riverctl map normal Mod4+Shift Q spawn "xterm -fg green -bg black"
 riverctl map normal Mod4 Q spawn alacritty

@@ -1,8 +1,14 @@
-# DOTFILE: $HOME/.bashrc
-# >>>>>>>> <initial contents>
-# >>>>>>>> source <repo>/dotfiles/bashrc
+# [LINKTO] ~/.bashrc
 
-# Colors!
+# .bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+# Colors! (the names are only accurate for console/xterm-256color)
 COL_RED='\033[0;31m'
 COL_GRN='\033[0;32m'
 COL_YLW='\033[0;33m'

@@ -1,5 +1,4 @@
-" DOTFILE: $XDG_CONFIG_HOME/nvim/init.vim
-" >>>>>>>> source <repo>/dotfiles/init.vim
+" [LINKTO] ~/.config/nvim/init.vim
 
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
