@@ -1,4 +1,0 @@
-#!/bin/bash
-
-"$WEZTERM_INSTALL" start
-
