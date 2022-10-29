@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# [LINKTO] !sudo echo -e "source $HOME/dotfiles/dotfiles/rc-local.sh\n" >> /etc/rc.local
+# [LINKTO] !sudo sh -c 'echo -e "source $PWD/dotfiles/rc-local.sh\n" >> /etc/rc.local'
 
 # Create a directory in /run/user for each user
 # This is designed to be used as their $XDG_RUNTIME_DIR
