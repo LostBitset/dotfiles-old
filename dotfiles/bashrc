@@ -52,8 +52,8 @@ export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland-egl
 export SDL_VIDEODRIVER=wayland
 
-# Export the location of the WezTerm terminal emulator
-export WEZTERM_INSTALL="$HOME/WezTerm.AppImage"
+# Export the location of the background for swww
+export SWWW_BG_INTENT="$HOME/SystemAssets/background.gif"
 
 # Add stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
@@ -62,7 +62,7 @@ export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 export PATH="$PATH:$HOME/.local/share/nvim/plugged/vim-iced/bin"
 
 # An alias for using with-nix-deps to run river
-alias rundesktop="(cd $HOME/dotfiles; with-nix-deps river)"
+alias rundesktop="(cd $HOME/dotfiles; with-nix-deps riverh)"
 
 # A message for when the river session ends
 RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"

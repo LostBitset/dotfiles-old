@@ -28,6 +28,7 @@ colors:
     white:   '0xe6ad7f'
 
 window:
+  opacity: 0.0
   padding:
       x: 5
       y: 5
