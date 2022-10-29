@@ -4,6 +4,7 @@ if [[ -f $HOME/.config/.dfsetup_completed ]]; then
 	echo "WARNING: Detected that setup already occurred. Stopping."
 	exit
 fi
+chmod +x ./bin/*
 for FILE in ./dotfiles/*; do
 	LINK_TARGET_LINE=$(cat $FILE | grep "\[LINKTO\]")
 	LINK_TARGET_DIRECTIVE=$(echo $LINK_TARGET_LINE | sed 's/^.*\[LINKTO\] //')
