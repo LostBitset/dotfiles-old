@@ -31,7 +31,11 @@ export ORIG_PS1="$PS1"
 
 if [[ "$TERM" == "alacritty" ]]; then
 	# Case: alacritty
-	PS1="${COL_GRN}:\\u/${SHELL##*/} ${COL_LBL}\\W ${COL_END}$ "
+	PS1=":\\u/${SHELL##*/}"
+	if [[ "$IN_WND_SHELL" == "1" ]]; then
+		PS1="(nix-deps $PS1)"
+	fi
+	PS1="${COL_GRN}$PS1 ${COL_LBL}\\W ${COL_END}$ "
 else
 	# Case: other terminal emulator or console
 	INIT_PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})${COL_END}"
