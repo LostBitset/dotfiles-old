@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ -f $HOME/.config/.dfsetup_completed ]]; then
+	echo "WARNING: Detected that setup already occurred. Stopping."
+	exit
+fi
 for FILE in ./dotfiles/*; do
 	LINK_TARGET_LINE=$(cat $FILE | grep "\[LINKTO\]")
 	LINK_TARGET_DIRECTIVE=$(echo $LINK_TARGET_LINE | sed 's/^.*\[LINKTO\] //')
@@ -7,7 +11,11 @@ for FILE in ./dotfiles/*; do
 		"~")
 			LINK_TARGET="$HOME${LINK_TARGET_DIRECTIVE:1}"
 			echo -n "Link: $LINK_TARGET -> $FILE..."
-			rm $LINK_TARGET
+			mkdir -p "${LINK_TARGET%/*}"
+			if [[ -f "$LINK_TARGET" ]]; then
+				echo -n " (rm)..."
+				rm $LINK_TARGET
+			fi
 			ln -s "$PWD/$FILE" "$LINK_TARGET"
 			;;
 		"!")
@@ -24,6 +32,7 @@ for FILE in ./dotfiles/*; do
 		echo -n " (exec)..."
 		chmod +x $FILE
 	fi
-	echo "done"
+	echo " done"
 done
+touch $HOME/.config/.dfsetup_completed
 
