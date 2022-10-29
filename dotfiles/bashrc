@@ -84,16 +84,13 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	fi
 	if [[ "$(tty)" == "/dev/tty1" ]]; then
 		clear
-		# Update wezterm (it's an AppImage from GitHub)
-		echo ">>> startup task: Reinstalling WezTerm... <<<"
-		ping -c1 api.github.com && wezterm-reinst || echo "Never mind. Cannot access GitHub right now."
 		echo ">>> startup task: Updating nix channels... <<<"
 		ping -c1 nixos.org && nix-channel --update
 		clear
 		neofetch
 		# Then start river...
-		echo "Starting River in 2 seconds... (press Ctrl+C to abort)"
-		sleep 2
+		echo "Starting River... (press Ctrl+C to abort)"
+		sleep 0.5
 		(rundesktop; clear; echo "$RIVER_ENDMSG"; touch /tmp/.riversess_ended)
 		if [[ -e /tmp/.riversess_ended ]]; then
 			rm /tmp/.riversess_ended
