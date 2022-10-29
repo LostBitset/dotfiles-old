@@ -61,10 +61,7 @@ riverctl border-color-unfocused 0x252525
 riverctl set-repeat 50 300
 
 # PulseAudio
-riverctl spawn 'pulseaudio --realtime --exit-idle-time=-1 --no-cpu-limit --start'
-
-# For some dumb reason, PulseAudio doesn't work unless I play a sound right away
-riverctl spawn 'playsilent'
+riverctl spawn 'pulseaudio --realtime --exit-idle-time=-1 --start'
 
 # SWWW (background)
 riverctl spawn swww-start
