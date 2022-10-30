@@ -78,14 +78,8 @@ export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
 # Add iced binary (for vim-iced) to the path
 export PATH="$PATH:$HOME/.local/share/nvim/plugged/vim-iced/bin"
 
-# An alias for using with-nix-deps to run river
-alias rundesktop="(cd $HOME/dotfiles; with-nix-deps riverh)"
-
 # A message for when the river session ends
 RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
-
-# Setup gh as a credential helper in git if this hasn't already been done
-git config --global --list | grep 'github\.com\.helper' >/dev/null || gh auth setup-git 2>/dev/null || true
 
 # If rustup is broken, reinstall the toolchain
 rustup show >/dev/null 2>&1 && (rustc >/dev/null 2>&1 || rustup-re stable) || true
@@ -108,7 +102,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		# Then start river...
 		echo "Starting River... (press Ctrl+C to abort)"
 		sleep 0.5
-		(rundesktop; clear; echo "$RIVER_ENDMSG"; touch /tmp/.riversess_ended)
+		(riverh; clear; echo "$RIVER_ENDMSG"; touch /tmp/.riversess_ended)
 		if [[ -e /tmp/.riversess_ended ]]; then
 			rm /tmp/.riversess_ended
 			exit
