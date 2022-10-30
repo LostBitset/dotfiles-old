@@ -57,8 +57,15 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Fix the dumb wayland cursors issue
 export WLR_NO_HARDWARE_CURSORS=1
 
+# Set XDG_DATA_DIRS
+if [[ "$XDG_DATA_DIRS" == "" ]]; then
+	export XDG_DATA_DIRS="/usr/share:/usr/share/local"
+else
+	export XDG_DATA_DIRS="/usr/share:/usr/share/local:$XDG_DATA_DIRS"
+fi
+
 # Let applications use wayland
-export MOZ_ENABLE_WAYLAND=1
+#export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORM=wayland-egl
 export SDL_VIDEODRIVER=wayland
 
