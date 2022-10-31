@@ -72,8 +72,11 @@ export SDL_VIDEODRIVER=wayland
 # Export the location of the background for swww
 export SWWW_BG_INTENT="$HOME/SystemAssets/background.gif"
 
-# Add stuff to the PATH
+# Add my own stuff to the PATH
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
+
+# Add even more stuff to the PATH
+export PATH="$PATH:$HOME/.local/bin"
 
 # Add iced binary (for vim-iced) to the path
 export PATH="$PATH:$HOME/.local/share/nvim/plugged/vim-iced/bin"
