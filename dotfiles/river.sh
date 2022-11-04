@@ -7,6 +7,15 @@ riverctl map normal Mod4+Shift Q spawn "xterm -fg green -bg black"
 riverctl map normal Mod4 Q spawn alacritty
 riverctl map normal Mod4 W spawn firefox
 
+riverctl declare-mode apps
+riverctl map normal Mod4 E enter-mode apps
+riverctl map apps Mod4 E enter-mode normal
+
+riverctl map apps None Q spawn alacritty
+riverctl map apps None W spawn firefox
+riverctl map apps None A spawn arduino
+riverctl map apps None R spawn ride
+
 riverctl map normal Mod4 U close
 riverctl map normal Mod4 H focus-view previous
 riverctl map normal Mod4 L focus-view next

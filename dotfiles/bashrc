@@ -87,6 +87,9 @@ RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
 # If rustup is broken, reinstall the toolchain
 rustup show >/dev/null 2>&1 && (rustc >/dev/null 2>&1 || rustup-re stable) || true
 
+# Alias for my favorite editor <3
+alias e="nvim"
+
 # Splash screen
 if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 	# Don't do it twice
