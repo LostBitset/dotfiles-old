@@ -17,5 +17,7 @@ if [ -f /.supress-rclocal-clear ]; then
 	echo "rc-local.sh: /.supress-rclocal-clear was found."
 else
 	clear
+	neofetch
+	echo "-- RC.LOCAL ENDED (just finished booting) --"
 fi
 

@@ -108,7 +108,7 @@ if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
 		# Then start river...
 		echo "Starting River... (press Ctrl+C to abort)"
 		sleep 0.5
-		(riverh; clear; echo "$RIVER_ENDMSG"; touch /tmp/.riversess_ended)
+		(riverh; clear; neofetch; echo "$RIVER_ENDMSG"; touch /tmp/.riversess_ended)
 		if [[ -e /tmp/.riversess_ended ]]; then
 			rm /tmp/.riversess_ended
 			exit
