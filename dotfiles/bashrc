@@ -1,118 +1,14 @@
 # [LINKTO] ~/.bashrc
 
-# .bashrc
+#
+# ~/.bashrc
+#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+# alias ls='ls --color=auto'
+# PS1='[\u@\h \W]\$ '
 
-# Colors! (the names are only accurate for console/xterm-256color)
-COL_RED='\033[0;31m'
-COL_GRN='\033[0;32m'
-COL_YLW='\033[0;33m'
-COL_BLU='\033[0;34m'
-COL_PUR='\033[0;35m'
-COL_CYA='\033[0;36m'
-COL_LGR='\033[0;37m'
-COL_DGR='\033[1;30m'
-COL_LRD='\033[1;31m'
-COL_LGN='\033[1;32m'
-COL_LYL='\033[1;33m'
-COL_LBL='\033[1;34m'
-COL_LPR='\033[1;35m'
-COL_LCY='\033[1;36m'
-COL_WHT='\033[1;37m'
-COL_END='\033[0m'
-
-# Set PS1
-export ORIG_PS1="$PS1"
-
-if [[ "$TERM" == "alacritty" ]]; then
-	# Case: alacritty
-	PS1=":\\u/${SHELL##*/}"
-	if [[ "$IN_WND_SHELL" == "1" ]]; then
-		PS1="(nix-deps $PS1)"
-	fi
-	PS1="${COL_GRN}$PS1 ${COL_LBL}\\W ${COL_END}$ "
-else
-	# Case: other terminal emulator or console
-	INIT_PS1="${COL_DGR}(\\u/${SHELL##*/} ${COL_GRN}\\W${COL_DGR})${COL_END}"
-	PS1="$INIT_PS1"
-	# Modify PS1 if running inside a with-nix-deps shell
-	if [[ "$IN_WND_SHELL" == "1" ]]; then
-		PS1="${COL_DGR}(nix/deps $PS1${COL_DGR})${COL_END}"
-	fi
-	# Finally, add the last bit
-	PS1="$PS1${COL_DGR}>${COL_END} "
-fi
-
-# Set XDG_RUNTIME_DIR to the directory created in /etc/rc.local
-export XDG_RUNTIME_DIR="/run/user/$USER"
-
-# Use the standard XDG_CONFIG_HOME
-export XDG_CONFIG_HOME="$HOME/.config"
-
-# Fix the dumb wayland cursors issue
-export WLR_NO_HARDWARE_CURSORS=1
-
-# Set XDG_DATA_DIRS
-if [[ "$XDG_DATA_DIRS" == "" ]]; then
-	export XDG_DATA_DIRS="/usr/share:/usr/share/local"
-else
-	export XDG_DATA_DIRS="/usr/share:/usr/share/local:$XDG_DATA_DIRS"
-fi
-
-# Let applications use wayland
-#export MOZ_ENABLE_WAYLAND=1
-export QT_QPA_PLATFORM=wayland-egl
-export SDL_VIDEODRIVER=wayland
-
-# Export the location of the background for swww
-export SWWW_BG_INTENT="$HOME/SystemAssets/background.gif"
-
-# Add my own stuff to the PATH
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/Builds/bin-links"
-
-# Add even more stuff to the PATH
-export PATH="$PATH:$HOME/.local/bin"
-
-# Add iced binary (for vim-iced) to the path
-export PATH="$PATH:$HOME/.local/share/nvim/plugged/vim-iced/bin"
-
-# A message for when the river session ends
-RIVER_ENDMSG=">>> The river session ended. You have been logged out. <<<"
-
-# If rustup is broken, reinstall the toolchain
-rustup show >/dev/null 2>&1 && (rustc >/dev/null 2>&1 || rustup-re stable) || true
-
-# Alias for my favorite editor <3
-alias e="nvim"
-
-# Splash screen
-if [[ "$SUPRESS_TTYSPLASH" == "" ]]; then
-	# Don't do it twice
-	export SUPRESS_TTYSPLASH=1
-
-	# Requires nix-shell, which is inside .bash_profile
-	if [ -e /home/hkt/.nix-profile/etc/profile.d/nix.sh ]; then
-		. /home/hkt/.nix-profile/etc/profile.d/nix.sh
-	fi
-	if [[ "$(tty)" == "/dev/tty1" ]]; then
-		clear
-		echo ">>> startup task: Updating nix channels... <<<"
-		ping -c1 nixos.org && nix-channel --update
-		clear
-		neofetch
-		# Then start river...
-		echo "Starting River... (press Ctrl+C to abort)"
-		sleep 0.5
-		(riverh; clear; neofetch; echo "$RIVER_ENDMSG"; touch /tmp/.riversess_ended)
-		if [[ -e /tmp/.riversess_ended ]]; then
-			rm /tmp/.riversess_ended
-			exit
-		fi
-	fi
-fi
+export PATH="$PATH:$HOME/dotfiles/bin"
 

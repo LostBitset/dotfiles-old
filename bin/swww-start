@@ -1,6 +1,0 @@
-#!/bin/bash
-
-swww query >/dev/null 2>&1 && swww kill
-swww init
-swww img $SWWW_BG_INTENT
-

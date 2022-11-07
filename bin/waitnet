@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [[ $2 ]]; then
-	timeout $1 sh -c "ping -c1 $2 || sleep $1"
-else
-	timeout $1 sh -c "ping -c1 wikipedia.org || sleep $1"
-fi
-
