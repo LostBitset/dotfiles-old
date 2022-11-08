@@ -12,5 +12,3 @@
 
 export PATH="$PATH:$HOME/dotfiles/bin"
 
-export XSECURELOCK_COMPOSITE_OBSCURER=0
-
