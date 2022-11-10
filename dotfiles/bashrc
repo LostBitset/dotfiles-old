@@ -10,5 +10,5 @@
 # alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
 
-export PATH="$PATH:$HOME/dotfiles/bin"
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.inst/flutter/bin"
 
