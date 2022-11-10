@@ -30,6 +30,9 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'junegunn/fzf'
 Plug 'guns/vim-sexp', {'for': 'clojure'}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/lsp-colors.nvim'
+Plug 'folke/trouble.nvim'
 
 call plug#end()
 
@@ -57,4 +60,6 @@ nnoremap <M-s> :Fern . -drawer<CR><C-w><C-w>
 nnoremap <M-k> <C-w><C-w>:w<CR><C-w><C-w>
 
 let g:lsp_document_code_action_signs_enabled = 0
+
+lua require("trouble").setup {}
 
