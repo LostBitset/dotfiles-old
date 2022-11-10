@@ -1,6 +1,7 @@
 #! /bin/sh
 
 # [LINKTO] ~/.config/bspwm/bspwmrc
+# [LINKEXEC]
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 

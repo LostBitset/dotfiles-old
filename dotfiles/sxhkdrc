@@ -16,6 +16,10 @@ super + w
 super + e
 	pcmanfm-qt
 
+# text editor
+super + a
+	emacs
+
 # program launcher
 super + @space
 	lxqt-runner
