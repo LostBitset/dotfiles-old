@@ -10,5 +10,12 @@
 # alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
 
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.inst/flutter/bin:$HOME/.emacs.d/bin"
+export PATH="$PATH:$HOME/dotfiles/bin"
+export PATH="$PATH:$HOME/.inst/flutter/bin"
+export PATH="$PATH:$HOME/.inst/zig/build/stage3/bin"
+export PATH="$PATH:$HOME/.inst/zls"
+
+if [[ "$TERM" == "eterm-color" ]]; then
+	export PS1="$PS1\n${SHELL##*/}> "
+fi
 

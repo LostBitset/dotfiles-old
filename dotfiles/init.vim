@@ -33,6 +33,7 @@ Plug 'guns/vim-sexp', {'for': 'clojure'}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/lsp-colors.nvim'
+Plug 'ziglang/zig.vim'
 
 call plug#end()
 
