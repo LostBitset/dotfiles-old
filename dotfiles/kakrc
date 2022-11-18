@@ -1,0 +1,29 @@
+# [LINKTO] ~/.config/kak/kakrc
+
+# connect kak-lsp to the kakoune session
+eval %sh{kak-lsp --kakoune -s $kak_session}
+
+# enable for all languages that we want to use the LSP, here we're enabling C++ and Zig.
+hook global WinSetOption filetype=(cpp|zig) %{
+    lsp-enable-window
+    # the options below are optional (and self-explanatory)
+    lsp-auto-hover-enable
+    lsp-auto-signature-help-enable
+    lsp-auto-hover-insert-mode-disable
+}
+
+# configure zls: we enable zig fmt, reference and semantic highlighting
+hook global WinSetOption filetype=zig %{
+    set-option buffer formatcmd 'zig fmt --stdin'
+    set-option window lsp_auto_highlight_references true
+    set-option global lsp_server_configuration zls.zig_lib_path="/usr/lib/zig"
+    set-option -add global lsp_server_configuration zls.warn_style=true
+    set-option -add global lsp_server_configuration zls.enable_semantic_tokens=true
+    hook window -group semantic-tokens BufReload .* lsp-semantic-tokens
+    hook window -group semantic-tokens NormalIdle .* lsp-semantic-tokens
+    hook window -group semantic-tokens InsertIdle .* lsp-semantic-tokens
+    hook -once -always window WinSetOption filetype=.* %{
+        remove-hooks window semantic-tokens
+    }
+}
+
