@@ -27,3 +27,6 @@ hook global WinSetOption filetype=zig %{
     }
 }
 
+# Set color scheme
+colorscheme palenight
+
