@@ -30,8 +30,7 @@ hook global WinSetOption filetype=zig %{
 # Set color scheme
 colorscheme palenight
 
-# Remap tab and s-tab, and make indenting 4 spaces
-map global insert <tab> '<a-;><a-gt>'
-map global insert <s-tab> '<a-;><a-lt>'
-set global indentwidth 4
+# Indenting is a tab that takes up four spaces
+set global tabstop 4
+set global indentwidth 0
 
