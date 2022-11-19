@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo sh -c "openvpn $HOME/Vpn/$1-*.ovpn &"
+
