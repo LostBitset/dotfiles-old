@@ -6,7 +6,7 @@
 
 # terminal emulator
 super + Return
-	lxterminal
+	terminator
 
 # web browser
 super + w
