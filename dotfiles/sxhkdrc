@@ -17,7 +17,7 @@ super + e
 	pcmanfm-qt
 
 # arduino ide
-super + n
+super + a
 	arduino-ide
 
 # program launcher
