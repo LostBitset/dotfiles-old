@@ -16,6 +16,10 @@ super + w
 super + e
 	pcmanfm-qt
 
+# arduino ide
+super + n
+	arduino-ide
+
 # program launcher
 super + @space
 	lxqt-runner
