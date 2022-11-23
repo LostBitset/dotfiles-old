@@ -146,6 +146,8 @@
     foreground_color = "#c5c8c6"
     palette = "#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff:#000000:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#ffffff"
     scrollbar_position = hidden
+	font = "Fira Code 16"
+	use_system_font = False
     show_titlebar = False
   [[origdefault]]
     background_image = None

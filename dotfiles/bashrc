@@ -14,6 +14,8 @@ export PATH="$PATH:$HOME/dotfiles/bin"
 export PATH="$PATH:$HOME/.inst/flutter/bin"
 export PATH="$PATH:$HOME/.inst/zig/build/stage3/bin"
 export PATH="$PATH:$HOME/.inst/zls"
+export PATH="$PATH:$HOME/.inst/all-appimages"
+export PATH="$PATH:$HOME/.local/bin"
 
 if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q

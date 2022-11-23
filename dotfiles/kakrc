@@ -28,7 +28,7 @@ hook global WinSetOption filetype=zig %{
 }
 
 # Set color scheme
-colorscheme palenight
+colorscheme default
 
 # Indenting is a tab that takes up four spaces
 set global tabstop 4
