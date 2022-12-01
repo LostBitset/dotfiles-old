@@ -34,3 +34,7 @@ colorscheme default
 set global tabstop 4
 set global indentwidth 0
 
+# Enable soft wrap
+addhl global/ wrap
+
+
