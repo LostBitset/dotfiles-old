@@ -4,7 +4,7 @@
 eval %sh{kak-lsp --kakoune -s $kak_session}
 
 # enable for all languages that we want to use the LSP, here we're enabling C++ and Zig.
-hook global WinSetOption filetype=(cpp|zig) %{
+hook global WinSetOption filetype=(c|cpp|zig|rust|python|go) %{
     lsp-enable-window
     # the options below are optional (and self-explanatory)
     lsp-auto-hover-enable
