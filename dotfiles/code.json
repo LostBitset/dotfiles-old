@@ -1,0 +1,13 @@
+// [LINKTO] ~/.config/Code - OSS/User/settings.json
+
+{
+    "workbench.colorTheme": "Monokai Dimmed",
+    "editor.fontSize": 18,
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "editor.rulers": [
+        100
+    ],
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+}
