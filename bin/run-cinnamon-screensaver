@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pkill cinnamon-screensaver
+(ps aux | grep cinnamon-screensaver | grep -v run-cinnamon-screensaver | awk '{print $2}' | xargs -n 1 kill 2>/dev/null) || true
+cinnamon-screensaver
+
