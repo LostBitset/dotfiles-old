@@ -19,6 +19,8 @@ export PATH="$PATH:$HOME/.inst/all-appimages"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/bin"
 
+docker context use rootless
+
 if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
