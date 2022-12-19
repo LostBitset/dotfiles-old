@@ -8,7 +8,7 @@
 [[ $- != *i* ]] && return
 
 # alias ls='ls --color=auto'
-# PS1='[\u@\h \W]\$ '
+PS1="\e[0m@\\u ${SHELL##*/}[\\W] \\$ \e[1m"
 
 export PATH="$PATH:$HOME/dotfiles/bin"
 export PATH="$PATH:$HOME/.inst/flutter/bin"
@@ -18,12 +18,12 @@ export PATH="$PATH:$HOME/.inst/simavr/simavr"
 export PATH="$PATH:$HOME/.inst/all-appimages"
 export PATH="$PATH:$HOME/.local/bin"
 
-if [ -f `which powerline-daemon` ]; then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  . /usr/share/powerline/bindings/bash/powerline.sh
-fi
+#if [ -f `which powerline-daemon` ]; then
+#  powerline-daemon -q
+#  POWERLINE_BASH_CONTINUATION=1
+#  POWERLINE_BASH_SELECT=1
+#  . /usr/share/powerline/bindings/bash/powerline.sh
+#fi
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
