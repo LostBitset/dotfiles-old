@@ -19,8 +19,6 @@ export PATH="$PATH:$HOME/.inst/all-appimages"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/bin"
 
-export DOCKER_HOST=unix:///run/user/1000/docker.sock
-
 if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
