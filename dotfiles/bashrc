@@ -25,3 +25,4 @@ if [ -f `which powerline-daemon` ]; then
   . /usr/share/powerline/bindings/bash/powerline.sh
 fi
 
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
