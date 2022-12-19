@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PATH=/home/own/bin:/sbin:/usr/sbin:$PATH dockerd-rootless.sh 
+
