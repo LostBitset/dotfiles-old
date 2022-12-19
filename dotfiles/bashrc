@@ -17,9 +17,6 @@ export PATH="$PATH:$HOME/.inst/zls"
 export PATH="$PATH:$HOME/.inst/simavr/simavr"
 export PATH="$PATH:$HOME/.inst/all-appimages"
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/bin"
-
-docker context use rootless >/dev/null 2>/dev/null
 
 if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q
