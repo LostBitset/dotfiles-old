@@ -62,3 +62,11 @@ nnoremap <M-k> <C-w><C-w>:w<CR><C-w><C-w>
 
 let g:lsp_document_code_action_signs_enabled = 0
 
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight EndOfBuffer ctermbg=none
+
+highlight Normal guibg=none
+highlight NonText guibg=none
+highlight EndOfBuffer guibg=none
+

@@ -8,7 +8,7 @@
 [[ $- != *i* ]] && return
 
 # alias ls='ls --color=auto'
-PS1="\e[0m@\\u ${SHELL##*/}[\\W] \\$ \e[1m"
+PS1="\e[0;36m\\u\e[0;36m@${HOSTNAME:0:2}..${HOSTNAME:0-2}:\e[30;46m\\W\e[0;31m ${SHELL##*/}> \e[0m"
 
 export PATH="$PATH:$HOME/dotfiles/bin"
 export PATH="$PATH:$HOME/.inst/flutter/bin"
@@ -19,6 +19,9 @@ export PATH="$PATH:$HOME/.inst/all-appimages"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/wpilib/2023/frccode"
 
+# Stop mouse pointer from being disabled while typing
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enabled" 0
+
 #if [ -f `which powerline-daemon` ]; then
 #  powerline-daemon -q
 #  POWERLINE_BASH_CONTINUATION=1
@@ -27,4 +30,6 @@ export PATH="$PATH:$HOME/wpilib/2023/frccode"
 #fi
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+source /usr/share/nvm/init-nvm.sh
 
