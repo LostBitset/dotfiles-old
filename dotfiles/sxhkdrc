@@ -8,6 +8,9 @@
 super + Return
 	terminator
 
+super + shift + Return
+	alacritty
+
 # web browser
 super + w
 	firefox
