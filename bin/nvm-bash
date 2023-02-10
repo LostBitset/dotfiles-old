@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
-nvm $@
+bash -c "OTERM=$TERM; TERM=dumb; source ~/.bashrc; nvm $@; TERM=$OTERM"
 

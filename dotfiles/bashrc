@@ -33,7 +33,7 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enab
 
 source /usr/share/nvm/init-nvm.sh
 
-if [[ $TERM == "alacritty" ]]; then
+if [[ $TERM == "xterm-256color" ]]; then
 	exec fish
 fi
 
