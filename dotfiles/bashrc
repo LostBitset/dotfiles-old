@@ -39,4 +39,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias clang_raylib="clang -o rlapp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11"
+alias x='(cd $(git rev-parse --show-toplevel); xmake)'
 
