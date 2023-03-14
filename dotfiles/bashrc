@@ -39,6 +39,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+alias scroff="sleep 0.1 && xset -display :0.0 dpms force off"
 alias clang_raylib="clang -o rlapp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11"
 alias x='(cd $(git rev-parse --show-toplevel); xmake)'
 
+
+export QSYS_ROOTDIR="/home/landon/intelFPGA_lite/22.1std/quartus/sopc_builder/bin"
