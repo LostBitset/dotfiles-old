@@ -1,10 +1,28 @@
 #!/bin/bash
 
+JUST_IN_CASE_TIME="0.5"
 git status 2>/dev/null || echo "not inside a git repo"
 git status 2>/dev/null || exit 1
+BRANCH="$(git branch --show-current)"
+REMOTE="$(git remote)"
+echo "[gitw] [INFO] Running on branch $BRANCH."
+echo "[gitw] [INFO] Using remote $REMOTE."
+echo "[gitw] [INFO] Pausing for " "$JUST_IN_CASE_TIME""s before pushing just in case."
+echo "[gitw] Pulling with --ff-only..."
 git pull --ff-only
+echo "Pulled successfully."
+echo "[gitw] Comitting all changes to repo..."
 git add $(git rev-parse --show-toplevel) --all
 git commit -m "$1"
 git status
+echo "[gitw] Committed successfully."
+echo "[gitw] The current git status report is shown above."
+echo "[gitw] Waiting just in case (will push in <""$JUST_IN_CASE_TIME""s)..."
+sleep "$JUST_IN_CASE_TIME"
+echo "[gitw] Pushing branch $BRANCH to remote $REMOTE..."
 git push $(git remote) $(git branch --show-current)
+echo "[gitw] Pushed successfully."
+echo "[gitw] [INFO] All done."
+echo "--- [gitw] final git status report ---"
+git status
 
