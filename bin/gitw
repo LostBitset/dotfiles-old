@@ -1,6 +1,6 @@
 #!/bin/bash
 
-JUST_IN_CASE_TIME="0.5"
+JUST_IN_CASE_TIME="1"
 git status 2>/dev/null || echo "not inside a git repo"
 git status 2>/dev/null || exit 1
 BRANCH="$(git branch --show-current)"
