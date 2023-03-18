@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+# Moves all of the Xilinx ISE stuff to the end of the path
+# So it doesn't mess up other libraries
+
+import sys
+
+[_, orig] = sys.argv
+
+new, new_xilinx = [], []
+
+for item in orig.split(":"):
+    if "xilinx" in item.lower():
+        new_xilinx.append(item)
+    else:
+        new.append(item)
+
+print(
+    ":".join([*new, *new_xilinx])
+)
+

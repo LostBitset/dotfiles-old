@@ -47,3 +47,18 @@ export QSYS_ROOTDIR="/home/landon/intelFPGA_lite/22.1std/quartus/sopc_builder/bi
 
 source "$HOME/Xilinx_ise/14.7/ISE_DS/settings64.sh" >/dev/null
 
+# Xilinx puts stuff on the PATH that messes everything up, so we have to move it to the end
+ORIG_PATH_PRE_XILINX_FIX="$PATH"
+PATH=`fix-path-xilinx "$(echo $PATH)"`
+
+# Now we fix the LD_LIBRARY_PATH, thanks a lot Xilinx I mean AMD
+# But we have to remember the actual path with the ISE stuff to run ISE
+LD_LIBRARY_PATH_POST_XILINX_PRE_FIX="$LD_LIBRARY_PATH"
+LD_LIBRARY_PATH=""
+
+# Now we have to undo our fix when actually running ISE
+# This will break if there's a space in the path but I don't really want to bother with
+# that right now
+ISE_BINARY_PATH="$(which ise)"
+alias ise="LD_LIBRARY_PATH=$LD_LIBRARY_PATH_POST_XILINX_PRE_FIX $ISE_BINARY_PATH"
+
