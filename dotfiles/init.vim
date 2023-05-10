@@ -33,7 +33,7 @@ Plug 'guns/vim-sexp', {'for': 'clojure'}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/lsp-colors.nvim'
-Plug 'ziglang/zig.vim'
+Plug 'zah/nim.vim'
 
 call plug#end()
 
@@ -69,4 +69,20 @@ highlight EndOfBuffer ctermbg=none
 highlight Normal guibg=none
 highlight NonText guibg=none
 highlight EndOfBuffer guibg=none
+
+" Begin snippet for zah/nim.vim
+
+fun! JumpToDef()
+  if exists("*GotoDefinition_" . &filetype)
+    call GotoDefinition_{&filetype}()
+  else
+    exe "norm! \<C-]>"
+  endif
+endf
+
+" Jump to tag
+nn <M-g> :call JumpToDef()<cr>
+ino <M-g> <esc>:call JumpToDef()<cr>i
+
+" End snippet for zah/nim.vim
 
