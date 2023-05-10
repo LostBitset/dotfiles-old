@@ -21,6 +21,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/wpilib/2023/frccode"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.config/emacs/bin"
+export PATH="$PATH:$HOME/.nimble/bin"
 
 # Stop mouse pointer from being disabled while typing
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Disable While Typing Enabled" 0
